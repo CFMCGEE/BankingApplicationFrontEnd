@@ -32,8 +32,9 @@ render() {
           </Routes>
 
           </main>
-          <FooterComponent/>
 
+          
+          <FooterComponent/>
       </div>
     )
   }
