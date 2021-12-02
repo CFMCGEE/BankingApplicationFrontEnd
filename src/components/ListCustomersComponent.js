@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CustomerService from "../services/CustomerService";
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 const ListCustomerComponent = () => {
   //function to change the state value
@@ -47,8 +47,8 @@ const ListCustomerComponent = () => {
           <th>Actions</th>
         </thead>
         <tbody>
-          {customer
-            .filter((customer) => {
+          {/*eslint-disable-next-line*/}
+          {customer.filter((customer) => {
               if (q === "") {
                 return customer;
               } else if (customer.first_Name.toLowerCase().includes(q.toLowerCase()) || customer.last_Name.toLowerCase().includes(q.toLowerCase())) {
