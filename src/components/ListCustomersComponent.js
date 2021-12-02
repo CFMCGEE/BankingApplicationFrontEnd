@@ -5,7 +5,13 @@ import { BrowserRouter as Link } from "react-router-dom";
 
 const ListCustomerComponent = () => {
   //function to change the state value
-  const [customer, setCustomer] = useState([]);
+  const [customer, setCustomer] = useState([
+    {
+      id: "",
+      first_Name: "",
+      last_Name: "",
+    },
+  ]);
 
   const [q, setQ] = useState("");
 
@@ -47,8 +53,8 @@ const ListCustomerComponent = () => {
           <th>Actions</th>
         </thead>
         <tbody>
-          {/*eslint-disable-next-line*/}
-          {customer.filter((customer) => {
+          {customer
+            .filter((customer) => {
               if (q === "") {
                 return customer;
               } else if (customer.first_Name.toLowerCase().includes(q.toLowerCase()) || customer.last_Name.toLowerCase().includes(q.toLowerCase())) {
@@ -57,9 +63,9 @@ const ListCustomerComponent = () => {
             })
             .map((customer) => (
               <tr key={customer.id}>
-                <td>{customer.id}</td>
-                <td>{customer.first_Name}</td>
-                <td>{customer.last_Name}</td>
+                <td class="bg-success">{customer.id}</td>
+                <td class="bg-info">{customer.first_Name}</td>
+                <td class="bg-info">{customer.last_Name}</td>
                 <td>
                   <Link to={`/edit-customer/${customer.id}`} className="btn btn-primary">
                     Update Customer
