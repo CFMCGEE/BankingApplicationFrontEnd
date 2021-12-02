@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 
 const DisplayAccounts = () => {
 
-const [account, setaccount] =useState([])
-
+const [account, setaccount] = useState([])
 
 useEffect(() => {
     getAllAccounts();
@@ -19,10 +18,6 @@ useEffect(() => {
             console.log(error);
         })
     }
-
-    //const accountarr = Object.values(account);
-
-
 
     return (
         <div>
@@ -38,8 +33,7 @@ useEffect(() => {
                 <th>Ops</th>
             </thead>
             <tbody>
-                    {
-                        account.map(
+                    {account.map(
                             account =>
                         <tr key = {account.id}>
                             <td>{account.id}</td>
@@ -48,9 +42,8 @@ useEffect(() => {
                             <td>{account.rewards}</td>
                             <td>{account.balance}</td>
                             <td>
-                                <Link className= "btn btn-info" to={`//${account.id}`}>Change</Link>
+                                <Link className= "btn btn-info" to={`/${account.id}`}>Change</Link>
                                 <button className = "btn btn-danger" 
-                                // onClick = {() => deletePizza(accounts.id)}
                                 style = {{marginLeft:"10px"}}>Erase</button>
                             </td>
                         </tr>

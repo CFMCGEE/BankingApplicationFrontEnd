@@ -1,5 +1,4 @@
-// eslint-disable-next-line
-import React, { useState, createContext, useContext } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import AccountService from "../services/AccountService";
 import { useNavigate } from "react-router-dom";
@@ -9,30 +8,13 @@ const AccountComponent = () => {
   const [nickname, setnickname] = useState("");
   const [rewards, setrewards] = useState("");
   const [balance, setbalance] = useState("");
-  const [customer, setcustomer] = useState({ id: "" });
-
-  // const customerContext= createContext({
-  //     customer: '',setcustomer: () =>{}
-  // })
-
-  // const [customer, setcustomer] = useContext(customerContext);
-
-  // const bigmanting=() =>{
-  //     const { userName, setUserName } = useContext(UserContext);
-  //     const changeHandler = event => setUserName(event.target.value);
-  //     return (
-  //       <input
-  //         type="text"
-  //         value={userName}
-  //         onChange={changeHandler}
-  //       />
-  //       );
-  //   }
+  const [customer] = useState({ id: "" });
 
   const navigate = useNavigate();
 
   const createAccount = (e) => {
     e.preventDefault();
+
     const account = { type, nickname, rewards, balance, customer };
 
     AccountService.createAccount(account)
@@ -110,7 +92,7 @@ const AccountComponent = () => {
                     placeholder="Enter Customer Id"
                     name="customer"
                     className="form-control"
-                    onChange={(e) => customer.id(e.target.value)}
+                    onChange={(e) => (customer.id = e.target.value)}
                   ></input>
                 </div>
 
