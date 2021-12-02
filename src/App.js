@@ -8,6 +8,7 @@ import HeaderComponent from './components/HeaderComponent';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import AccountComponent from './components/AccountComponent';
 
 class App extends Component { 
    constructor(props){
@@ -27,13 +28,14 @@ render() {
           </header>
 
           <main>
-          
+         
           <Routes>
+          <Route path = '/accounts' element = { <AccountComponent/>} />
           </Routes>
 
           </main>
 
-          
+
           <FooterComponent/>
       </div>
     )
