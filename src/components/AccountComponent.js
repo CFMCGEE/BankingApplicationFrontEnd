@@ -1,7 +1,8 @@
+// eslint-disable-next-line
 import React, {useState, createContext, useContext} from 'react'
 import { Link } from 'react-router-dom';
 import AccountService from '../services/AccountService';
-import {useNavigate, useParams}from 'react-router-dom';
+import {useNavigate}from 'react-router-dom';
 
 
 const AccountComponent = () => {
@@ -9,7 +10,7 @@ const AccountComponent = () => {
     const [nickname, setnickname] = useState('');
     const [rewards, setrewards] = useState('');
     const [balance, setbalance] = useState('');
-    const [customer, setcustomer] = useState({id:1});
+    const [customer, setcustomer] = useState({id: 1});
 
     // const customerContext= createContext({
     //     customer: '',setcustomer: () =>{}
