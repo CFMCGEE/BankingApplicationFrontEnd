@@ -25,70 +25,51 @@ const ListCustomerComponent = () => {
       });
   };
 
-  const deleteCustomer = (customerId) => {
-    CustomerService.deleteCustomer(customerId)
-      .then((res) => {
-        console.log(res.data);
-        window.location.reload();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   return (
-    <>
-      <div class="loadding-page">
-        <div class="cssload-box-loading"></div>
-      </div>
-      <div className="container">
-        <h2 className="text-center">Customers List</h2>
-        <Link to="/create-customer" className="btn btn-primary mb-2">
-          Create Customer
-        </Link>
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Search"
-          onChange={(e) => {
-            setQ(e.target.value);
-          }}
-        />
-        <table className="table table-bordered table-striped">
-          <thead>
-            <th>Customer Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Actions</th>
-          </thead>
-          <tbody>
-            {customer
-              .filter((customer) => {
-                if (q === "") {
-                  return customer;
-                } else if (customer.first_Name.toLowerCase().includes(q.toLowerCase())) {
-                  return customer;
-                }
-              })
-              .map((customer) => (
-                <tr key={customer.id}>
-                  <td>{customer.id}</td>
-                  <td>{customer.first_Name}</td>
-                  <td>{customer.last_Name}</td>
-                  <td>
-                    <Link to={`/edit-customer/${customer.id}`} className="btn btn-primary">
-                      Update Customer
-                    </Link>
-                    <button className="btn btn-danger" onClick={() => deleteCustomer(customer.id)} style={{ marginLeft: "10px" }}>
-                      Delete Customer
-                    </button>
-                  </td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
-      </div>
-    </>
+    <div className="container">
+      <h2 className="text-center">Customers List</h2>
+      <Link to="/create-customer" className="btn btn-primary mb-2">
+        Create Customer
+      </Link>
+      <input
+        type="text"
+        className="form-control"
+        placeholder="Search"
+        onChange={(e) => {
+          setQ(e.target.value);
+        }}
+      />
+      <table className="table table-bordered table-striped">
+        <thead>
+          <th>Customer Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Actions</th>
+        </thead>
+        <tbody>
+          {customer
+            .filter((customer) => {
+              if (q === "") {
+                return customer;
+              } else if (customer.first_Name.toLowerCase().includes(q.toLowerCase()) || customer.last_Name.toLowerCase().includes(q.toLowerCase())) {
+                return customer;
+              }
+            })
+            .map((customer) => (
+              <tr key={customer.id}>
+                <td>{customer.id}</td>
+                <td>{customer.first_Name}</td>
+                <td>{customer.last_Name}</td>
+                <td>
+                  <Link to={`/edit-customer/${customer.id}`} className="btn btn-primary">
+                    Update Customer
+                  </Link>
+                </td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

@@ -24,10 +24,6 @@ class CustomerService {
     return axios.put(CUSTOMER_BASE_REST_API_URL + "/" + customerId, customer);
   }
 
-  // Delete customer by id using axios delete request
-  deleteCustomer(customerId) {
-    return axios.delete(CUSTOMER_BASE_REST_API_URL + "/" + customerId);
-  }
 }
 
 export default new CustomerService();

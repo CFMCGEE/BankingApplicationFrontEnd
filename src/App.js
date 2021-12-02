@@ -10,8 +10,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<ListCustomerComponent />} />
           <Route exact path="/customers" element={<ListCustomerComponent />} />
-          <Route exact path="/create-customer" element={<CreateCustomerComponent />} />
-          <Route exact path="/edit-customer/:id" element={<CreateCustomerComponent />} />
+          <Route path="/create-customer" element={<CreateCustomerComponent />} />
+          <Route path="/edit-customer/:id" element={<CreateCustomerComponent />} />
         </Routes>
       </div>
     </div>

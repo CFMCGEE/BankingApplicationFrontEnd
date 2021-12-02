@@ -16,7 +16,7 @@ const CreateOrUpdateCustomer = () => {
 
     if (id) {
       CustomerService.updateCustomer(id, newCustomer)
-        .then((res) => {
+        .then(() => {
           navigate("/customers");
         })
         .catch((err) => {
@@ -65,7 +65,7 @@ const CreateOrUpdateCustomer = () => {
               <div className="form-group mb-2">
                 <label className="form-label">First Name</label>
                 <input
-                  type="text"
+                  type="select"
                   placeholder="First Name?"
                   name="FirstName"
                   className="form-control"
@@ -80,7 +80,7 @@ const CreateOrUpdateCustomer = () => {
                   </div>
                 </div>
                 <input
-                  type="text"
+                  type="select"
                   placeholder="Last Name?"
                   name="LastName"
                   className="form-control"
