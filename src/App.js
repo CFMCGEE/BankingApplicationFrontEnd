@@ -23,14 +23,14 @@ function App() {
         
         <Routes>
 
-          <Route path='/' element = {<DisplayAccounts />} />  
-          <Route path="/deposits" element={<DepositsComponent />} />
-          <Route path='/accounts' element = {<AccountComponent/>} />
-          <Route path="/customers" element={<ListCustomerComponent />} />
-          <Route path="/add-bill" element={<AddBillComponent />} />
-          <Route path="/list-customers" element={<ListCustomerComponent />} />
-          <Route path="/create-customer" element={<CreateCustomerComponent />} />
-          <Route path="/edit-customer/:id" element={<CreateCustomerComponent />} />
+          <Route exact path='/' element = {<DisplayAccounts />} />  
+          <Route exact path="/deposits" element={<DepositsComponent />} />
+          <Route exact path='/accounts' element = {<AccountComponent/>} />
+          <Route exact path="/customers" element={<ListCustomerComponent />} />
+          <Route exact path="/add-bill" element={<AddBillComponent />} />
+          <Route exact path="/list-customers" element={<ListCustomerComponent />} />
+          <Route exact path="/create-customer" element={<CreateCustomerComponent />} />
+          <Route exact path="/edit-customer/:id" element={<CreateCustomerComponent />} />
 
         </Routes>
        
