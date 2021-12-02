@@ -20,14 +20,14 @@ const HeaderComponent = () => {
 
       </li>
       <li class="nav-item active">
-                <NavLink className="nav-link" to="/">
-                  empty
+                <NavLink className="nav-link" to="/deposits">
+                  Deposit Add
                 </NavLink>
       </li>
 
 <li class="nav-item active">
-                <NavLink className="nav-link" to="/">
-                  empty
+                <NavLink className="nav-link" to="/create-customer">
+                  create customer
                 </NavLink>
       </li>
     </ul>

@@ -8,6 +8,7 @@ import CreateCustomerComponent from "./components/CreateCustomerComponent";
 import DepositsComponent from "./components/DepositsComponent";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import DisplayAccounts from './components/DisplayAccounts';
 
 function App() {
   return (
@@ -20,11 +21,12 @@ function App() {
       <div className="container">
         
         <Routes>
-    
-          <Route path="/deposits" element={<DepositsComponent />} />
+
+          <Route exact path="/deposits" element={<DepositsComponent />} />
           <Route exact path="/customers" element={<ListCustomerComponent />} />
           <Route exact path="/list-customers" element={<ListCustomerComponent />} />
           <Route path = '/accounts' element = { <AccountComponent/>} />
+          <Route path = '/' element = { <DisplayAccounts/>} />
           <Route path="/create-customer" element={<CreateCustomerComponent />} />
           <Route path="/edit-customer/:id" element={<CreateCustomerComponent />} />
 
