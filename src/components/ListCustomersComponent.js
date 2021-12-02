@@ -57,9 +57,9 @@ const ListCustomerComponent = () => {
             })
             .map((customer) => (
               <tr key={customer.id}>
-                <td>{customer.id}</td>
-                <td>{customer.first_Name}</td>
-                <td>{customer.last_Name}</td>
+                <td class="bg-success">{customer.id}</td>
+                <td class="bg-info">{customer.first_Name}</td>
+                <td class="bg-info">{customer.last_Name}</td>
                 <td>
                   <Link to={`/edit-customer/${customer.id}`} className="btn btn-primary">
                     Update Customer

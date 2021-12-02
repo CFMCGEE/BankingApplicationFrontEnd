@@ -19,10 +19,10 @@ function App() {
       <div className="container">
         <HeaderComponent />
         <Routes>
-          <Route exact path="/" element={<DepositsComponent />} />
+          {/* <Route exact path="/" element={<DepositsComponent />} /> */}
           <Route exact path="/customers" element={<ListCustomerComponent />} />
-          <Route exact path="/list-customers" element={<ListCustomerComponent />} />
-          <Route path = '/accounts' element = { <AccountComponent/>} />
+          {/* <Route exact path="/list-customers" element={<ListCustomerComponent />} /> */}
+          {/* <Route path = '/accounts' element = { <AccountComponent/>} /> */}
           <Route path="/create-customer" element={<CreateCustomerComponent />} />
           <Route path="/edit-customer/:id" element={<CreateCustomerComponent />} />
         </Routes>
