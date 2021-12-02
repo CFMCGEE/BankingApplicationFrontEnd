@@ -9,7 +9,7 @@ const AccountComponent = () => {
   const [nickname, setnickname] = useState("");
   const [rewards, setrewards] = useState("");
   const [balance, setbalance] = useState("");
-  const [customer, setcustomer] = useState({ id: 1 });
+  const [customer, setcustomer] = useState({ id: "" });
 
   // const customerContext= createContext({
   //     customer: '',setcustomer: () =>{}
@@ -110,8 +110,7 @@ const AccountComponent = () => {
                     placeholder="Enter Customer Id"
                     name="customer"
                     className="form-control"
-                    value={customer.id}
-                    onChange={(e) => setcustomer(e.target.value)}
+                    onChange={(e) => customer.id(e.target.value)}
                   ></input>
                 </div>
 
