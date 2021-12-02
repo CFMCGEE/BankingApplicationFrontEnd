@@ -8,6 +8,11 @@ class AccountService {
         return axios.post(ACCOUNT_BASE_API , account)
     }
 
+    getAllAccounts() { 
+        return axios.get(ACCOUNT_BASE_API )
+    }
+    
+
 }
 
 export default new AccountService();

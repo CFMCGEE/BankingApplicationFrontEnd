@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Route, Routes } from 'react-router-dom'; 
-
 import FooterComponent from './components/FooterComponent';
 import HeaderComponent from './components/HeaderComponent';
 import AccountComponent from './components/AccountComponent';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-
-
-// eslint-disable-next-line
-import { Navbar, Container, Nav } from "react-bootstrap";
-// eslint-disable-next-line
-import { Route, Routes } from "react-router-dom";
 import DepositsComponent from "./components/DepositsComponent";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+
 
 function App() {
   return (
