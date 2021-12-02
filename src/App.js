@@ -14,12 +14,14 @@ function App() {
   return (
     <div>
       <main>
-      <HeaderComponent />
+      <HeaderComponent/>
+    
       <FooterComponent/>
       </main>
       <div className="container">
         
         <Routes>
+
           <Route exact path="/deposits" element={<DepositsComponent />} />
           <Route exact path="/customers" element={<ListCustomerComponent />} />
           <Route exact path="/list-customers" element={<ListCustomerComponent />} />
@@ -27,6 +29,7 @@ function App() {
           <Route path = '/' element = { <DisplayAccounts/>} />
           <Route path="/create-customer" element={<CreateCustomerComponent />} />
           <Route path="/edit-customer/:id" element={<CreateCustomerComponent />} />
+
         </Routes>
        
       </div>

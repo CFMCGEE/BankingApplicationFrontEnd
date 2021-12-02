@@ -10,4 +10,5 @@ class DepositsService {
     );
   }
 }
+
 export default new DepositsService();
