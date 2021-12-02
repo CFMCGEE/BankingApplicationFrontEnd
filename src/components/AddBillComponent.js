@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from "react";
-
 import {useNavigate, Link, useParams} from 'react-router-dom';
 import BillService from "../services/BillService";
-
-
-
-
-
-
 
 const AddBillComponent = () => {
 
@@ -76,13 +69,6 @@ const AddBillComponent = () => {
         });
     },  [id]);
         
-
-    
-
-
-
-
-
     const editBill = (id) => {
         const bill = {
             status,payee,nickname,creation_date,payment_date,reccurring_date,upcoming_payment_date, payment_amount,account
@@ -94,14 +80,7 @@ const AddBillComponent = () => {
             console.log((error))
         })
     }
-
-
-
    
-
-
-    
-    
     return(
         <div>
 

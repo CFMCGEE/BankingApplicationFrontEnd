@@ -6,9 +6,10 @@ import AccountComponent from './components/AccountComponent';
 import ListCustomerComponent from "./components/ListCustomersComponent";
 import CreateCustomerComponent from "./components/CreateCustomerComponent";
 import DepositsComponent from "./components/DepositsComponent";
+import DisplayAccounts from './components/DisplayAccounts';
+import AddBillComponent from './components/AddBillComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import DisplayAccounts from './components/DisplayAccounts';
 
 function App() {
   return (
@@ -22,11 +23,11 @@ function App() {
         
         <Routes>
 
-          <Route exact path="/deposits" element={<DepositsComponent />} />
-          <Route exact path="/customers" element={<ListCustomerComponent />} />
-          <Route exact path="/list-customers" element={<ListCustomerComponent />} />
-          <Route path = '/accounts' element = { <AccountComponent/>} />
-          <Route path = '/' element = { <DisplayAccounts/>} />
+          <Route path='/' element = {<DisplayAccounts />} />  
+          <Route path="/deposits" element={<DepositsComponent />} />
+          <Route path='/accounts' element = {<AccountComponent/>} />
+          <Route path="/customers" element={<ListCustomerComponent />} />
+          <Route path="/list-customers" element={<ListCustomerComponent />} />
           <Route path="/create-customer" element={<CreateCustomerComponent />} />
           <Route path="/edit-customer/:id" element={<CreateCustomerComponent />} />
 
