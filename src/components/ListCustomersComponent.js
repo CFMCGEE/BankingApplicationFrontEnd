@@ -5,7 +5,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const ListCustomerComponent = () => {
   //function to change the state value
-  const [customer, setCustomer] = useState([]);
+  const [customer, setCustomer] = useState([
+    //add address object
+  ]);
 
   const [q, setQ] = useState("");
 
