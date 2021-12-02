@@ -15,7 +15,7 @@ const HeaderComponent = () => {
       </li>
     </ul>
     <span class="navbar-text">
-      Pop flintlocks and sling diamond rocks
+      Getcho Bread up
     </span>
   </div>
 </nav>
