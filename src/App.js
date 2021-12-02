@@ -13,18 +13,21 @@ function App() {
   return (
     <div>
       <main>
-      <HeaderComponent />
+      <HeaderComponent/>
+    
       <FooterComponent/>
       </main>
       <div className="container">
         
         <Routes>
-          <Route exact path="/fdf" element={<DepositsComponent />} />
+    
+          <Route path="/deposits" element={<DepositsComponent />} />
           <Route exact path="/customers" element={<ListCustomerComponent />} />
           <Route exact path="/list-customers" element={<ListCustomerComponent />} />
           <Route path = '/accounts' element = { <AccountComponent/>} />
           <Route path="/create-customer" element={<CreateCustomerComponent />} />
           <Route path="/edit-customer/:id" element={<CreateCustomerComponent />} />
+
         </Routes>
        
       </div>
