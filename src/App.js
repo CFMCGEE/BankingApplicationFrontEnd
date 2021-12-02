@@ -1,42 +1,21 @@
-import React, { Component } from 'react';
-// eslint-disable-next-line 
-import { Navbar, Container, Nav } from 'react-bootstrap';
-// eslint-disable-next-line 
-import { Route, Routes } from 'react-router-dom'; 
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import ListCustomerComponent from "./components/ListCustomersComponent";
+import CreateCustomerComponent from "./components/CreateCustomerComponent";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-
-class App extends Component { 
-   constructor(props){
-       super(props);
-       this.state = {
-       
-       }
- }
-
-render() { 
-  return ( 
-
-      <div className="App">
-            
-           <header>
-          </header>
-
-          <main>
-          
-          <Routes>
-          </Routes>
-
-          </main>
-
-
+function App() {
+  return (
+    <div>
+      <div className="container">
+        <Routes>
+          <Route exact path="/" element={<ListCustomerComponent />} />
+          <Route exact path="/customers" element={<ListCustomerComponent />} />
+          <Route exact path="/create-customer" element={<CreateCustomerComponent />} />
+          <Route exact path="/edit-customer/:id" element={<CreateCustomerComponent />} />
+        </Routes>
       </div>
-    )
-  }
-
+    </div>
+  );
 }
 
-
-
-export default App
+export default App;
