@@ -233,18 +233,6 @@ const AddBillComponent = () => {
                                 </div>
 
 
-                                {/* <div className = "form-group mb-2" >
-                                    <label className = "form-label">Employee Email</label> <br/>
-                                    <input type = "email" 
-                                    placeholder ="Enter Email of Employee" 
-                                    name = "email"
-                                    className = "form control"
-                                    value = {email}
-                                    onChange = {(e) => setemail(e.target.value)}
-                                    >
-                                    </input>
-                                </div> */}
-
                                 <button className ="btn btn-success" onClick = {(e) => makEABILL(e)}> Make A Bill</button>
                                 {/* TO DO */}
                                 {/* use my editBill function */}
@@ -253,6 +241,7 @@ const AddBillComponent = () => {
                                 {/* use my delete Bill function */}
                                 <button className ="btn btn-success" onClick = {(e) => makEABILL(e)}> Delete A Bill</button>
                                 <Link to = "/" className="btn btn-danger"> Cancel</Link>
+
                             </form>
                         </div>
                     </div>
