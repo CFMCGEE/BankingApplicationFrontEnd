@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate, Link, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import DepositsService from "../services/DepositService";
 
 const DepositsComponent = () => {
@@ -24,7 +24,7 @@ const DepositsComponent = () => {
   const [status, setStatus] = useState("");
   const [payee_id, setPayee_id] = useState("");
   const [type, setType] = useState("");
-  const [account, setAccount] = useState({ id: 1 });
+  const [account] = useState({ id: "" });
 
   const navigate = useNavigate();
   const createDeposits = (e) => {
@@ -146,8 +146,7 @@ const DepositsComponent = () => {
                     placeholder="Enter Account"
                     name="crustChoice"
                     className="form-control"
-                    value={account.id}
-                    onChange={(e) => setAccount(e.target.value)}
+                    onChange={(e) => account.id = (e.target.value)}
                   ></input>
                 </div>
 
@@ -157,7 +156,7 @@ const DepositsComponent = () => {
                 >
                   Submit Deposit
                 </button>
-                <Link to="/pizza" className="btn btn-danger">
+                <Link to="/" className="btn btn-danger">
                   Cancel
                 </Link>
               </form>

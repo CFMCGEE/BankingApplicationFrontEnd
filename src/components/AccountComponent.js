@@ -1,52 +1,34 @@
-// eslint-disable-next-line
-import React, {useState, createContext, useContext} from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import AccountService from '../services/AccountService';
 import {useNavigate}from 'react-router-dom';
 
 
 const AccountComponent = () => {
+
     const [type, settype] = useState('');
     const [nickname, setnickname] = useState('');
     const [rewards, setrewards] = useState('');
     const [balance, setbalance] = useState('');
-    const [customer, setcustomer] = useState({id: 1});
-
-    // const customerContext= createContext({
-    //     customer: '',setcustomer: () =>{}
-    // })
-    
-   // const [customer, setcustomer] = useContext(customerContext);
-
-    // const bigmanting=() =>{
-    //     const { userName, setUserName } = useContext(UserContext);
-    //     const changeHandler = event => setUserName(event.target.value);
-    //     return (
-    //       <input
-    //         type="text"
-    //         value={userName}
-    //         onChange={changeHandler}
-    //       />
-    //       );
-    //   }
-
+    const [customer] = useState({ id: ''}); 
 
     const navigate = useNavigate();
 
-const createAccount = (e) => {
-    e.preventDefault();
-    const account = {type,nickname,rewards,balance,customer}
+    const createAccount = (e) => {
+        e.preventDefault();
 
-    AccountService.createAccount(account).then((response) => {
+        const account = { type, nickname, rewards, balance, customer }
+        
+        AccountService.createAccount(account).then((response) => {
 
-        console.log(response.data)
-        navigate("/");
+            console.log(response.data)
+            navigate("/");
 
-    }).catch(error =>{
-        console.log(error)
-    })
-}
+        }).catch(error =>{
+            console.log(error)
+        })
 
+    }
 
     return (
         <div>
@@ -99,9 +81,6 @@ const createAccount = (e) => {
                             >
                             </input>
                             </div>
-                            
-                            
-                        
 
                         <div className= "form-group mb-2">
                             <label className = "form-label">Balance </label>
@@ -123,13 +102,11 @@ const createAccount = (e) => {
                             placeholder = "Enter Customer Id"
                             name = "customer"
                             className = "form-control"
-                            value = {customer.id}
-                            onChange = {(e) => setcustomer(e.target.value)}
+                            onChange = {(e) => customer.id = (e.target.value)}
                             >
                             </input>
                             </div>
 
-                            
                             <button className = "btn btn-success" onClick = {(e) => createAccount(e)} >Summon</button>
                             <Link to = "/" className="btn btn-danger">Cancel</Link>
                             </form>

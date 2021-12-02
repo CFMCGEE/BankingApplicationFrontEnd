@@ -27,6 +27,7 @@ function App() {
           <Route path="/deposits" element={<DepositsComponent />} />
           <Route path='/accounts' element = {<AccountComponent/>} />
           <Route path="/customers" element={<ListCustomerComponent />} />
+          <Route path="/add-bill" element={<AddBillComponent />} />
           <Route path="/list-customers" element={<ListCustomerComponent />} />
           <Route path="/create-customer" element={<CreateCustomerComponent />} />
           <Route path="/edit-customer/:id" element={<CreateCustomerComponent />} />
