@@ -39,9 +39,9 @@ const ListCustomerComponent = () => {
           setQ(e.target.value);
         }}
       />
-      <table className="table table-bordered table-striped">
+      <table className="table table-bordered table-striped table-hover">
         <thead>
-          <th>Customer Id</th>
+          {/* <th>Customer Id</th> */}
           <th>First Name</th>
           <th>Last Name</th>
           <th>Actions</th>
@@ -57,9 +57,9 @@ const ListCustomerComponent = () => {
             })
             .map((customer) => (
               <tr key={customer.id}>
-                <td class="bg-success">{customer.id}</td>
-                <td class="bg-info">{customer.first_Name}</td>
-                <td class="bg-info">{customer.last_Name}</td>
+                {/* <td class="table-primary">{customer.id}</td> */}
+                <td class="table-success">{customer.first_Name}</td>
+                <td class="table-info">{customer.last_Name}</td>
                 <td>
                   <Link to={`/edit-customer/${customer.id}`} className="btn btn-primary">
                     Update Customer
