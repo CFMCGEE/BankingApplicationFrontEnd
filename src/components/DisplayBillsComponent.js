@@ -2,20 +2,24 @@ import React, { useEffect, useState, useParams } from 'react'
 import BillService from '../services/BillService';
 import {Link} from 'react-router-dom'
 
+
+
 const DisplayBillsComponent = () => {
     const[bills, setBills] = useState([]);
-    //const {id} = useParams();
-
+    const {id} = useParams();
 
     useEffect(() => {
-        // BillService.getBillById(id).then((response) => {
-        //     setBills(response.data);
-        //     console.log(response.data);
-        // }).catch(error => {
-        //     console.log(error)
-        // })
-    }, []);
+       getBillsById();
+    });
 
+    const getBillsById = () => {
+        BillService.getBillById(id).then((response) => {
+            setBills(response.data);
+            console.log(response.data);
+        }).catch(error => {
+            console.log(error)
+        })
+    }
 
     return (
         <div>

@@ -16,7 +16,6 @@ const CreateBillComponent = () => {
     const { id } = useParams()
     const navigate = useNavigate('')
 
-
     const createOrUpdateBill = (e) => {
         e.preventDefault();
         const bill = {
@@ -27,7 +26,7 @@ const CreateBillComponent = () => {
             payment_date,
             recurring_date,
             upcoming_payment_date,
-            payment_amount,
+            payment_amount, 
             account
         }
 
@@ -52,7 +51,6 @@ const CreateBillComponent = () => {
         // }).catch((error) =>{
         //     console.log(error);
         // });
-
     }
 
     return (
@@ -158,12 +156,11 @@ const CreateBillComponent = () => {
                                         type="text"
                                         placeholder="Enter Payment Amount"
                                         className="form-control"
-
                                         onChange={(e) => account.id = e.target.value}>
                                     </input>
                                 </div>
 
-                                <Link to="/"><button className="btn btn-success" onClick={(e) => createOrUpdateBill(e)} >Submit</button></Link>
+                                <Link to="/bills"><button className="btn btn-success" onClick={(e) => createOrUpdateBill(e)} >Submit</button></Link>
                                 <Link to="/bills"><button className="btn btn-danger">Cancel</button></Link>
                             </form>
 

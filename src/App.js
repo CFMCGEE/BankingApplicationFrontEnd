@@ -36,15 +36,14 @@ const App = () => {
          
           <Route exact path="/accounts" element={<DisplayAccountsComponent />} />
           <Route exact path="/customers" element={<DisplayCustomersComponent />} />
-          <Route exact path="/bills" element={<DisplayBillsComponent />} />
 
           <Route exact path="/create-account" element={<CreateAccountComponent />} />
           <Route exact path="/create-customer" element={<CreateCustomerComponent />} />
           <Route exact path="/create-deposit" element={<CreateDepositsComponent />} />
           <Route exact path="/create-bill" element={<CreateBillComponent />} />
-
           <Route exact path="/update-account/:id" element={<CreateAccountComponent />} />
           <Route exact path="/update-customer/:id" element={<CreateCustomerComponent />} />
+          <Route exact path="/view-bills/:id" element={<DisplayBillsComponent />}></Route>
 
         </Routes>
 
