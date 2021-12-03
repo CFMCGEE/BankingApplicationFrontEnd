@@ -94,12 +94,32 @@ header {
 }
 
 .footer {
+
   position: absolute;
   bottom: 0;
   width:100%;
   height: 2.5rem;;
   background-color: #0D6EFD;
   text-align: center; 
+
+}
+
+.page {
+
+    position: relative;
+    max-height: 20vh;
+
+}
+
+.containerD {
+
+    width: 100%;
+    padding-right: var(--bs-gutter-x,5.0rem); 
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 1400px;
+    max-width: 1320px;
 
 }
 

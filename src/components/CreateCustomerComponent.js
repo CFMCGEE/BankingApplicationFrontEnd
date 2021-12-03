@@ -56,7 +56,7 @@ const CreateOrUpdateCustomer = () => {
 
   return (
     <div className="container">
-      <br /> <br />
+      <br /> 
       <div className="row">
         <div style={{ backgroundColor: "#00a86b", color: "#FFFFFF" }} className="card col-md-6 offset-md-3">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -68,7 +68,7 @@ const CreateOrUpdateCustomer = () => {
                 <label className="form-label">First Name</label>
                 <input
                   type="select"
-                  placeholder="First Name?"
+                  placeholder="Enter First Name"
                   name="FirstName"
                   className="form-control"
                   value={first_Name}
@@ -83,7 +83,7 @@ const CreateOrUpdateCustomer = () => {
                 </div>
                 <input
                   type="select"
-                  placeholder="Last Name?"
+                  placeholder="Enter Last Name"
                   name="LastName"
                   className="form-control"
                   value={last_Name}

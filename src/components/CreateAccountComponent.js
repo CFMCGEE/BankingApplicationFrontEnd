@@ -73,7 +73,7 @@ const CreateAccountComponent = () => {
 
   return (
     <div>
-      <br /> <br />
+      <br /> 
       <div className="container">
         <div className="row">
           <div style={{ backgroundColor: "#00a86b", color: "#FFFFFF" }} className="card col-md-6 offset-md-3 offset-md-3">

@@ -18,7 +18,6 @@ const HeaderComponent = () => {
       <NavDropdown.Divider />
       <NavDropdown.Item href="/accounts">List of Accounts</NavDropdown.Item>
       <NavDropdown.Item href="/customers">List of Customers</NavDropdown.Item>
-      <NavDropdown.Item href="/bills">List of Bills</NavDropdown.Item>
       </NavDropdown>
       </Nav>
       </Navbar.Collapse>

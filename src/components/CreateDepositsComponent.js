@@ -54,7 +54,7 @@ const CreateDepositsComponent = () => {
   return (
     <div>
       <div className="container">
-      <br /> <br />
+      <br />
         <div className="row">
           <div style={{ backgroundColor: "#00a86b", color: "#FFFFFF" }} className="card col-md-6 offset-md-3 offset-md-3">
           <h2 className="text-center">Create Deposit</h2>

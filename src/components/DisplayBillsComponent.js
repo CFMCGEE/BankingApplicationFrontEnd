@@ -3,6 +3,7 @@ import BillService from '../services/BillService';
 import {Link} from 'react-router-dom'
 
 const DisplayBillsComponent = () => {
+    
     const[bills, setBills] = useState([]);
     //const {id} = useParams();
 
@@ -23,7 +24,7 @@ const DisplayBillsComponent = () => {
             <Link to="/create-bill" className="btn btn-primary mb-2" style={{ backgroundColor: "#AB5463" }}>Create Bill</Link>
             <table className="table table-bordered table-striped">
                 <thead>
-                    <th>Bill Id</th>
+                    <th>Bill ID</th>
                     <th>Status</th>
                     <th>Payee</th>
                     <th>Nickname</th>
