@@ -67,9 +67,7 @@ const ListCustomerComponent = () => {
                 <td class="bg-info">{customer.first_Name}</td>
                 <td class="bg-info">{customer.last_Name}</td>
                 <td>
-                  <Link to={`/edit-customer/${customer.id}`} className="btn btn-primary">
-                    Update Customer
-                  </Link> 
+                  <Link to={`/edit-customer/${customer.id}`} className="btn btn-primary"> Update </Link> 
                 </td>
               </tr>
             ))}

@@ -56,10 +56,11 @@ const CreateOrUpdateCustomer = () => {
 
   return (
     <div className="container">
+      <br /> <br />
       <div className="row">
-        <div className="card col-md-6 offset-md-3">
+        <div style={{ backgroundColor: "#00a86b", color: "#FFFFFF" }} className="card col-md-6 offset-md-3">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-            <h6 class="mb-3 text-primary"> {title()}</h6>
+            <h6 class="mb-3"> {title()}</h6>
           </div>
           <div className="card-body">
             <form>
@@ -89,10 +90,10 @@ const CreateOrUpdateCustomer = () => {
                   onChange={(e) => setLastName(e.target.value)}
                 ></input>
               </div>
-              <button type="submit" className="btn btn-success" onClick={(e) => saveOrUpdateCustomer(e)}>
+              <button type="submit" className="btn btn-primary" onClick={(e) => saveOrUpdateCustomer(e)}>
                 Create
               </button>
-              <Link to="/customers" className="btn btn-danger" style={{ marginLeft: "10px" }}>
+              <Link to="/customers" className="btn btn-danger" style={{ marginLeft: "445px" }}>
                 Cancel
               </Link>
             </form>

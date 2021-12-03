@@ -33,6 +33,7 @@ useEffect(() => {
      }
 
     return (
+
         <div>
 
             <h2 className = "text-center"> Accounts</h2>
@@ -62,7 +63,6 @@ useEffect(() => {
 
             </thead>
             <tbody>
-
             {/*eslint-disable-next-line*/}
             {account.filter((accounts) => {
                                 if (search === "") {
@@ -81,8 +81,8 @@ useEffect(() => {
                             <td>{account.rewards}</td>
                             <td>{account.balance}</td>
                             <td>
-                                <Link className= "btn btn-info" to={`/edit-account/${account.id}`}>Update</Link>
-                                <Button className = "btn btn-danger" onClick={() => deleteAccount(account.id)} style = {{marginLeft:"10px"}}>Erase</Button>
+                                <Link className= "btn btn-primary" to={`/edit-account/${account.id}`}>Update</Link>
+                                <Button className = "btn btn-danger" onClick={() => deleteAccount(account.id)} style={{marginLeft:"10px"}} >Erase</Button>
                             </td>
                             </tr>
 
@@ -92,6 +92,7 @@ useEffect(() => {
                 </tbody>
             </Table>
         </div>
+
     )
 }
 

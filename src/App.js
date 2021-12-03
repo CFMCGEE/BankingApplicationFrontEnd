@@ -20,9 +20,10 @@ function App() {
 
       <header> <HeaderComponent /> </header>
 
-      <main> </main>
+       <main>  </main>
 
       <div className="container">
+      
         <Routes>
 
           <Route exact path="/accounts" element={<DisplayAccounts />} />

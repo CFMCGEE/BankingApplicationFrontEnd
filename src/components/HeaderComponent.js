@@ -5,7 +5,7 @@ const HeaderComponent = () => {
 
   return (
 
-      <Navbar bg="primary" variant="dark">
+      <Navbar style={{ backgroundColor: "#008080", color: "#FFFFFF" }} variant="dark">
       <Container>
       <Navbar.Brand href="/">One Piece of Bread Banking</Navbar.Brand>
       <Navbar.Collapse id="basic-navbar-nav">

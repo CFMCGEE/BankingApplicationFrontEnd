@@ -54,8 +54,9 @@ const DepositsComponent = () => {
   return (
     <div>
       <div className="container">
+      <br /> <br />
         <div className="row">
-          <div className="card col-md-6 offset-md-3 offset-md-3">
+          <div style={{ backgroundColor: "#00a86b", color: "#FFFFFF" }} className="card col-md-6 offset-md-3 offset-md-3">
             <div className="card-body">
               <form>
                 <div className="form-group mb-2">
@@ -150,15 +151,9 @@ const DepositsComponent = () => {
                   ></input>
                 </div>
 
-                <button
-                  className="btn btn-success"
-                  onClick={(e) => createDeposits(e)}
-                >
-                  Submit Deposit
-                </button>
-                <Link to="/" className="btn btn-danger">
-                  Cancel
-                </Link>
+                <button className="btn btn-primary" onClick={(e) => createDeposits(e)}>Create</button>
+                <Link to="/" className="btn btn-danger" style={{ marginLeft: "445px" }}>Cancel</Link>
+            
               </form>
             </div>
           </div>

@@ -10,7 +10,7 @@ const AccountComponent = () => {
   const [nickname, setNickname] = useState('');
   const [rewards, setRewards] = useState('');
   const [balance, setBalance] = useState('');
-  const [customer, setCustomer] = useState({ id: '' });
+  const [customer] = useState({ id: '' });
 
   const navigate = useNavigate();
   const { id } = useParams();
@@ -73,7 +73,7 @@ const AccountComponent = () => {
       <br /> <br />
       <div className="container">
         <div className="row">
-          <div style={{ backgroundColor: "#343a40", color: "#FFFFFF" }} className="card col-md-6 offset-md-3 offset-md-3">
+          <div style={{ backgroundColor: "#00a86b", color: "#FFFFFF" }} className="card col-md-6 offset-md-3 offset-md-3">
             { title() }
             <div className="card-body">
               <Form>
@@ -136,8 +136,8 @@ const AccountComponent = () => {
                   ></input>
                 </div>
 
-                <Button className="btn btn-success" onClick={(e) => createOrUppdateAccount(e)}>Create</Button>
-                <Link to="/accounts" className="btn btn-danger">Cancel</Link>
+                <Button type="submit" className="btn btn-primary" onClick={(e) => createOrUppdateAccount(e)}>Create</Button>
+                <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "445px" }}>Cancel</Link>
             
               </Form>
             </div>
