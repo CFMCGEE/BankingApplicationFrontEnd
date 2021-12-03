@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+
 import FooterComponent from "./components/FooterComponent";
 import HeaderComponent from "./components/HeaderComponent";
 import AccountComponent from "./components/AccountComponent";
@@ -9,10 +10,12 @@ import DepositsComponent from "./components/DepositsComponent";
 import DisplayAccounts from './components/DisplayAccounts';
 import AddBillComponent from './components/AddBillComponent';
 
+import ReRouterComponent from './components/ReRouterComponent';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-function App() {
+const App = () => {
 
   return (
     
@@ -26,6 +29,8 @@ function App() {
       
         <Routes>
 
+          <Route exact path="/" element={<ReRouterComponent />}> </Route>
+         
           <Route exact path="/accounts" element={<DisplayAccounts />} />
           <Route exact path="/customers" element={<ListCustomerComponent />} />
 
@@ -38,6 +43,7 @@ function App() {
           <Route exact path="/edit-customer/:id" element={<CreateCustomerComponent />} />
 
         </Routes>
+
       </div>
 
       <footer> <FooterComponent /> </footer>
