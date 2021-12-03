@@ -28,7 +28,7 @@ const App = () => {
 
        <main>  </main>
 
-      <div className="container">
+      <div class="container">
       
         <Routes>
 

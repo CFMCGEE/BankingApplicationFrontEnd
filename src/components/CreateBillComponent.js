@@ -24,6 +24,7 @@ const CreateBillComponent = () => {
     }
 
         if(id){
+
             BillService.editBill(id).then((response) => {
                 navigate("/");
             }).catch((error) => {
@@ -68,7 +69,7 @@ const CreateBillComponent = () => {
             console.log(error);
         });
     },  [id]);
-        
+    
     const editBill = (id) => {
         const bill = {
             status,payee,nickname,creation_date,payment_date,reccurring_date,upcoming_payment_date, payment_amount,account

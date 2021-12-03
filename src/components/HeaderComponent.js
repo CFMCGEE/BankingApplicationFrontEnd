@@ -10,7 +10,7 @@ const HeaderComponent = () => {
       <Navbar.Brand href="/">One Piece of Bread Banking</Navbar.Brand>
       <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-      <NavDropdown title="Pages" id="basic-nav-dropdown">
+      <NavDropdown className ="fancy_text" title="Pages" id="basic-nav-dropdown">
       <NavDropdown.Item href="/create-account">Create Account</NavDropdown.Item>
       <NavDropdown.Item href="/create-customer">Create Customer</NavDropdown.Item>
       <NavDropdown.Item href="/create-deposit">Create Deposit</NavDropdown.Item>

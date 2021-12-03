@@ -57,11 +57,13 @@ const CreateAccountComponent = () => {
 
     AccountService.getAccount(id).then((response) => {
 
+        console.log(response.data.data)
+
         setType(response.data.data.type);
         setNickname(response.data.data.nickname);
         setRewards(response.data.data.rewards);
         setBalance(response.data.data.balance);
-        // setCustomer(response.data.data.customer.id);
+        setCustomer(response.data.data.customer.id);
 
       }).catch((e) => {
         console.log(e);
@@ -133,6 +135,8 @@ const CreateAccountComponent = () => {
                     placeholder="Enter Customer ID"
                     name="customer"
                     className="form-control"
+                    // value={customer.id}
+                    // onChange={(e) => setCustomer(e.target.value)}
                     onChange={(e) => (customer.id = e.target.value)}
                   ></input>
                 </div>
