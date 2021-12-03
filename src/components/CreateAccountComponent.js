@@ -4,13 +4,13 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Button, Form } from 'react-bootstrap';
 import AccountService from "../services/AccountService";
 
-const AccountComponent = () => {
+const CreateAccountComponent = () => {
 
   const [type, setType] = useState('');
   const [nickname, setNickname] = useState('');
   const [rewards, setRewards] = useState('');
   const [balance, setBalance] = useState('');
-  const [customer] = useState({ id: '' });
+  const [customer, setCustomer] = useState({ id: '' });
 
   const navigate = useNavigate();
   const { id } = useParams();
@@ -48,19 +48,20 @@ const AccountComponent = () => {
     if (id) {
         return <h2 className="text-center">Update Account</h2>
     } else {
-        return <h2 className="text-center">Add Account</h2>
+        return <h2 className="text-center">Create Account</h2>
     }
     
 }
 
   useEffect(() => {
 
-    AccountService.getSingleAccount(id).then((response) => {
+    AccountService.getAccount(id).then((response) => {
 
-        setType(response.data.type);
-        setNickname(response.data.nickname);
-        setRewards(response.data.rewards);
-        setBalance(response.data.balance);
+        setType(response.data.data.type);
+        setNickname(response.data.data.nickname);
+        setRewards(response.data.data.rewards);
+        setBalance(response.data.data.balance);
+        // setCustomer(response.data.data.customer.id);
 
       }).catch((e) => {
         console.log(e);
@@ -126,18 +127,18 @@ const AccountComponent = () => {
                 </div>
 
                 <div className="form-group mb-2">
-                  <label className="form-label">Customer Id </label>
+                  <label className="form-label">Customer ID </label>
                   <input
                     type="text"
-                    placeholder="Enter Customer Id"
+                    placeholder="Enter Customer ID"
                     name="customer"
                     className="form-control"
                     onChange={(e) => (customer.id = e.target.value)}
                   ></input>
                 </div>
 
-                <Button type="submit" className="btn btn-primary" onClick={(e) => createOrUppdateAccount(e)}>Create</Button>
-                <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "445px" }}>Cancel</Link>
+                <Button type="submit" className="btn btn-primary" onClick={(e) => createOrUppdateAccount(e)}>Submit</Button>
+                <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "440px" }}>Cancel</Link>
             
               </Form>
             </div>
@@ -148,4 +149,4 @@ const AccountComponent = () => {
   )
 }
 
-export default AccountComponent
+export default CreateAccountComponent;

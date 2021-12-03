@@ -3,7 +3,7 @@ import CustomerService from "../services/CustomerService";
 
 import { Link } from "react-router-dom";
 
-const ListCustomerComponent = () => {
+const DisplayCustomerComponent = () => {
   //function to change the state value
   const [customer, setCustomer] = useState([
     {
@@ -41,7 +41,7 @@ const ListCustomerComponent = () => {
       <input
         type="text"
         className="form-control"
-        placeholder="Search"
+        placeholder="Search customers"
         onChange={(e) => {
           setQ(e.target.value);
         }}
@@ -68,7 +68,7 @@ const ListCustomerComponent = () => {
                 <td class="bg-info">{customer.first_Name}</td>
                 <td class="bg-info">{customer.last_Name}</td>
                 <td>
-                  <Link to={`/edit-customer/${customer.id}`} className="btn btn-primary"> Update </Link> 
+                  <Link to={`/update-customer/${customer.id}`} className="btn btn-primary"> Update </Link> 
                 </td>
               </tr>
             ))}
@@ -78,4 +78,4 @@ const ListCustomerComponent = () => {
   );
 };
 
-export default ListCustomerComponent;
+export default DisplayCustomerComponent;

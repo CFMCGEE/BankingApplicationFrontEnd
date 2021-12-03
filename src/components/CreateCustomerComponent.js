@@ -48,7 +48,7 @@ const CreateOrUpdateCustomer = () => {
 
   const title = () => {
     if (id) {
-      return <h2 className="text-center">Edit Customer</h2>;
+      return <h2 className="text-center">Update Customer</h2>;
     } else {
       return <h2 className="text-center">Create Customer</h2>;
     }
@@ -91,9 +91,9 @@ const CreateOrUpdateCustomer = () => {
                 ></input>
               </div>
               <button type="submit" className="btn btn-primary" onClick={(e) => saveOrUpdateCustomer(e)}>
-                Create
+                Submit
               </button>
-              <Link to="/customers" className="btn btn-danger" style={{ marginLeft: "445px" }}>
+              <Link to="/customers" className="btn btn-danger" style={{ marginLeft: "440px" }}>
                 Cancel
               </Link>
             </form>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import DepositsService from "../services/DepositService";
 
-const DepositsComponent = () => {
+const CreateDepositsComponent = () => {
   // const [deposits, setDeposits] = useState([]);
 
   // useEffect(() =>{
@@ -57,6 +57,7 @@ const DepositsComponent = () => {
       <br /> <br />
         <div className="row">
           <div style={{ backgroundColor: "#00a86b", color: "#FFFFFF" }} className="card col-md-6 offset-md-3 offset-md-3">
+          <h2 className="text-center">Create Deposit</h2>
             <div className="card-body">
               <form>
                 <div className="form-group mb-2">
@@ -151,8 +152,8 @@ const DepositsComponent = () => {
                   ></input>
                 </div>
 
-                <button className="btn btn-primary" onClick={(e) => createDeposits(e)}>Create</button>
-                <Link to="/" className="btn btn-danger" style={{ marginLeft: "445px" }}>Cancel</Link>
+                <button className="btn btn-primary" onClick={(e) => createDeposits(e)}>Submit</button>
+                <Link to="/" className="btn btn-danger" style={{ marginLeft: "440px" }}>Cancel</Link>
             
               </form>
             </div>
@@ -163,4 +164,4 @@ const DepositsComponent = () => {
   );
 };
 
-export default DepositsComponent;
+export default CreateDepositsComponent;

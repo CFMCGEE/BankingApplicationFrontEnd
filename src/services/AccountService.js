@@ -8,7 +8,7 @@ class AccountService {
         return axios.post(ACCOUNT_BASE_API, account)
     }
 
-    getSingleAccount(id) {
+    getAccount(id) {
         return axios.get(ACCOUNT_BASE_API + '/' + id)
     }
 

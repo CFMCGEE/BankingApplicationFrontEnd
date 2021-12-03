@@ -103,3 +103,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.ReactTable.-striped.-highlight {
+    width: 532px;
+}

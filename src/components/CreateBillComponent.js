@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import {useNavigate, Link, useParams} from 'react-router-dom';
 import BillService from "../services/BillService";
 
-const AddBillComponent = () => {
+const CreateBillComponent = () => {
 
     const [status, setStatus] = useState('')
     const [payee, setPayee] = useState('') 
@@ -231,4 +231,4 @@ const AddBillComponent = () => {
 
 }
 
-export default AddBillComponent
+export default CreateBillComponent;

@@ -1,14 +1,16 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import FooterComponent from "./components/FooterComponent";
 import HeaderComponent from "./components/HeaderComponent";
-import AccountComponent from "./components/AccountComponent";
-import ListCustomerComponent from "./components/ListCustomersComponent";
+import FooterComponent from "./components/FooterComponent";
+
+import CreateAccountComponent from "./components/CreateAccountComponent";
 import CreateCustomerComponent from "./components/CreateCustomerComponent";
-import DepositsComponent from "./components/DepositsComponent";
-import DisplayAccounts from './components/DisplayAccounts';
-import AddBillComponent from './components/AddBillComponent';
+import CreateBillComponent from './components/CreateBillComponent';
+import CreateDepositsComponent from "./components/CreateDepositsComponent";
+
+import DisplayAccountsComponent from './components/DisplayAccountsComponent';
+import DisplayCustomersComponent from "./components/DisplayCustomersComponent";
 
 import ReRouterComponent from './components/ReRouterComponent';
 
@@ -31,16 +33,16 @@ const App = () => {
 
           <Route exact path="/" element={<ReRouterComponent />}> </Route>
          
-          <Route exact path="/accounts" element={<DisplayAccounts />} />
-          <Route exact path="/customers" element={<ListCustomerComponent />} />
+          <Route exact path="/accounts" element={<DisplayAccountsComponent />} />
+          <Route exact path="/customers" element={<DisplayCustomersComponent />} />
 
-          <Route exact path="/create-account" element={<AccountComponent />} />
+          <Route exact path="/create-account" element={<CreateAccountComponent />} />
           <Route exact path="/create-customer" element={<CreateCustomerComponent />} />
-          <Route exact path="/create-deposit" element={<DepositsComponent />} />
-          <Route exact path="/create-bill" element={<AddBillComponent />} />
+          <Route exact path="/create-deposit" element={<CreateDepositsComponent />} />
+          <Route exact path="/create-bill" element={<CreateBillComponent />} />
 
-          <Route exact path="/edit-account/:id" element={<DisplayAccounts />} />
-          <Route exact path="/edit-customer/:id" element={<CreateCustomerComponent />} />
+          <Route exact path="/update-account/:id" element={<CreateAccountComponent />} />
+          <Route exact path="/update-customer/:id" element={<CreateCustomerComponent />} />
 
         </Routes>
 

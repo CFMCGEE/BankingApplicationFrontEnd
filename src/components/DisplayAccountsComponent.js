@@ -3,7 +3,7 @@ import AccountService from '../services/AccountService'
 import { Link } from 'react-router-dom'
 import { Table, Button, InputGroup, FormControl } from 'react-bootstrap';
 
-const DisplayAccounts = () => {
+const DisplayAccountsComponent = () => {
 
 const [account, setaccount] = useState([])
 const [search, setSearch] = useState("")
@@ -81,7 +81,7 @@ useEffect(() => {
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{account.rewards}</td>
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{account.balance}</td>
                             <td class="bg-info">                             
-                                <Link className= "btn btn-primary" to={`/edit-account/${account.id}`}>Update</Link>
+                                <Link className= "btn btn-primary" to={`/update-account/${account.id}`}>Update</Link>
                                 <Button className = "btn btn-danger" onClick={() => deleteAccount(account.id)} style={{marginLeft:"10px"}}>Erase</Button>
                             </td>
                             </tr>
@@ -95,4 +95,4 @@ useEffect(() => {
     )
 }
 
-export default DisplayAccounts
+export default DisplayAccountsComponent;
