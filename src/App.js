@@ -50,6 +50,7 @@ const App = () => {
           <Route exact path="/update-account/:id" element={<CreateAccountComponent />} />
           <Route exact path="/update-customer/:id" element={<CreateCustomerComponent />} />
 
+          <Route exact path="/view-bills/:id" element={<DisplayBillsComponent />} />
           <Route exact path="/view-withdrawals/:id" element={<DisplayWithdrawalsComponent />} />
 
         </Routes>
