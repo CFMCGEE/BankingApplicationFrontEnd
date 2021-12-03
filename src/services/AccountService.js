@@ -12,7 +12,6 @@ class AccountService {
         return axios.get(ACCOUNT_BASE_API)
     }
     
-
 }
 
 export default new AccountService();

@@ -1,7 +1,8 @@
-import "../App.css";
 import React, { useState, useEffect } from "react";
-import CustomerService from "../services/CustomerService";
 import { useNavigate, Link, useParams } from "react-router-dom";
+import CustomerService from "../services/CustomerService";
+
+import "../App.css";
 
 const CreateOrUpdateCustomer = () => {
   const [first_Name, setFirstName] = useState("");
