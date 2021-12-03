@@ -35,8 +35,8 @@ useEffect(() => {
     return (
 
         <div>
-
-            <h2 className = "text-center"> Accounts</h2>
+          <br />
+            <h2 className="text-center"> Accounts</h2>
             <Link to="/create-account" className="btn btn-primary mb-2">
               Create Account
             </Link>
@@ -51,8 +51,8 @@ useEffect(() => {
                  />
                  </InputGroup>
 
-            <Table className = "table table bordered table-striped">
-            <thead>
+            <Table className="table table-bordered table-striped">
+            <thead> 
 
                 <th>Account ID</th>
                 <th>Type</th>
@@ -75,17 +75,16 @@ useEffect(() => {
                         return (      
 
                         <tr key = {account.id}>
-                            <td>{account.id}</td>
-                            <td>{account.type}</td>
-                            <td>{account.nickname}</td>
-                            <td>{account.rewards}</td>
-                            <td>{account.balance}</td>
-                            <td>
+                            <td style={{ color: "#FFFFFF" }} class="bg-info"> {account.id}</td>
+                            <td style={{ color: "#FFFFFF" }} class="bg-info">{account.type}</td>
+                            <td style={{ color: "#FFFFFF" }} class="bg-info">{account.nickname}</td>
+                            <td style={{ color: "#FFFFFF" }} class="bg-info">{account.rewards}</td>
+                            <td style={{ color: "#FFFFFF" }} class="bg-info">{account.balance}</td>
+                            <td class="bg-info">                             
                                 <Link className= "btn btn-primary" to={`/edit-account/${account.id}`}>Update</Link>
-                                <Button className = "btn btn-danger" onClick={() => deleteAccount(account.id)} style={{marginLeft:"10px"}} >Erase</Button>
+                                <Button className = "btn btn-danger" onClick={() => deleteAccount(account.id)} style={{marginLeft:"10px"}}>Erase</Button>
                             </td>
                             </tr>
-
                            )
                         })
                     }

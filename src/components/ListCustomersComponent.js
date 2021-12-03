@@ -33,6 +33,7 @@ const ListCustomerComponent = () => {
 
   return (
     <div className="container">
+      <br />
       <h2 className="text-center">Customers List</h2>
       <Link to="/create-customer" className="btn btn-primary mb-2">
         Create Customer

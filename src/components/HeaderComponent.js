@@ -15,8 +15,8 @@ const HeaderComponent = () => {
       <NavDropdown.Item href="/create-customer">Create Customer</NavDropdown.Item>
       <NavDropdown.Item href="/create-deposit">Create Deposit</NavDropdown.Item>
       <NavDropdown.Divider />
-      <NavDropdown.Item href="/customers">List of Customers</NavDropdown.Item>
       <NavDropdown.Item href="/accounts">List of Accounts</NavDropdown.Item>
+      <NavDropdown.Item href="/customers">List of Customers</NavDropdown.Item>
       </NavDropdown>
       </Nav>
       </Navbar.Collapse>
