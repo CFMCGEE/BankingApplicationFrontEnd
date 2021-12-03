@@ -2,7 +2,7 @@ import React, { useEffect, useState, useParams } from 'react'
 import BillService from '../services/BillService';
 import {Link} from 'react-router-dom'
 
-const ListBillsComponent = () => {
+const DisplayBillsComponent = () => {
     const[bills, setBills] = useState([]);
     //const {id} = useParams();
 
@@ -58,4 +58,4 @@ const ListBillsComponent = () => {
     )
 }
 
-export default ListBillsComponent;
+export default DisplayBillsComponent;
