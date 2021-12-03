@@ -162,7 +162,7 @@ const CreateBillComponent = () => {
                                 {/* TO DO
                                 {/* use my delete Bill function */}
                                 {/* <button className ="btn btn-success" onClick = {(e) => makEABILL(e)}> Delete A Bill</button> */}
-                                <Link to="/bills" className="btn btn-danger" style={{ marginLeft: "440px" }}>Cancel</Link>
+                                <Link to="/bills" className="btn btn-danger" style={{ marginLeft: "147px" }}>Cancel</Link>
 
                             </Form>
                         </div>

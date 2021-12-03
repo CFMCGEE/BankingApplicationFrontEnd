@@ -93,7 +93,7 @@ const CreateOrUpdateCustomer = () => {
               <button type="submit" className="btn btn-primary" onClick={(e) => saveOrUpdateCustomer(e)}>
                 Submit
               </button>
-              <Link to="/customers" className="btn btn-danger" style={{ marginLeft: "440px" }}>
+              <Link to="/customers" className="btn btn-danger" style={{ marginLeft: "147px" }}>
                 Cancel
               </Link>
             </form>

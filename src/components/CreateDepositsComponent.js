@@ -153,7 +153,7 @@ const CreateDepositsComponent = () => {
                 </div>
 
                 <button className="btn btn-primary" onClick={(e) => createDeposits(e)}>Submit</button>
-                <Link to="/" className="btn btn-danger" style={{ marginLeft: "440px" }}>Cancel</Link>
+                <Link to="/" className="btn btn-danger" style={{ marginLeft: "147px" }}>Cancel</Link>
             
               </form>
             </div>

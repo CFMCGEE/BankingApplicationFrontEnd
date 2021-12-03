@@ -142,7 +142,7 @@ const CreateAccountComponent = () => {
                 </div>
 
                 <Button type="submit" className="btn btn-primary" onClick={(e) => createOrUppdateAccount(e)}>Submit</Button>
-                <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "440px" }}>Cancel</Link>
+                <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "147px" }}>Cancel</Link>
             
               </Form>
             </div>

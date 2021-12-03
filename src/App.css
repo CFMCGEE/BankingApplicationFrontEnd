@@ -107,7 +107,7 @@ header {
 .page {
 
     position: relative;
-    max-height: 20vh;
+    max-height: 100vh;
 
 }
 
@@ -118,8 +118,8 @@ header {
     padding-left: var(--bs-gutter-x,.75rem);
     margin-right: auto;
     margin-left: auto;
-    min-width: 1400px;
-    max-width: 1320px;
+    min-width: 800px;
+    max-width: 700px;
 
 }
 
