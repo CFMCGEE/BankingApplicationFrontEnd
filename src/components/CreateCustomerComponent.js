@@ -65,7 +65,7 @@ const CreateOrUpdateCustomer = () => {
           <div className="card-body">
             <form>
               <div className="form-group mb-2">
-                <label className="form-label">First Name</label>
+                <label className="form-label">First Name:</label>
                 <input
                   type="select"
                   placeholder="Enter First Name"
@@ -78,7 +78,7 @@ const CreateOrUpdateCustomer = () => {
               <div className="form-group mb-2">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="form-group">
-                    <label className="form-label">Last Name</label>
+                    <label className="form-label">Last Name:</label>
                   </div>
                 </div>
                 <input

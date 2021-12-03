@@ -85,7 +85,7 @@ const CreateDepositsComponent = () => {
                 </div>
 
                 <div className="form-group mb-2">
-                  <label className="form-label"> Amount to Deposit</label>
+                  <label className="form-label"> Amount to Deposit:</label>
                   <input
                     type="text"
                     placeholder="Enter Amount To Deposit"
@@ -108,7 +108,7 @@ const CreateDepositsComponent = () => {
                 </div>
 
                 <div className="form-group mb-2">
-                  <label className="form-label"> Status</label>
+                  <label className="form-label"> Status:</label>
                   <input
                     type="text"
                     placeholder="Whats the status"
@@ -120,7 +120,7 @@ const CreateDepositsComponent = () => {
                 </div>
 
                 <div className="form-group mb-2">
-                  <label className="form-label"> Payee ID</label>
+                  <label className="form-label"> Payee ID:</label>
                   <input
                     type="text"
                     placeholder="Enter Payee Id"
@@ -131,7 +131,7 @@ const CreateDepositsComponent = () => {
                   ></input>
                 </div>
                 <div className="form-group mb-2">
-                  <label className="form-label"> Type </label>
+                  <label className="form-label"> Type:</label>
                   <input
                     type="text"
                     placeholder="Enter Type"
@@ -142,7 +142,7 @@ const CreateDepositsComponent = () => {
                   ></input>
                 </div>
                 <div className="form-group mb-2">
-                  <label className="form-label"> Account </label>
+                  <label className="form-label"> Account:</label>
                   <input
                     type="text"
                     placeholder="Enter Account"

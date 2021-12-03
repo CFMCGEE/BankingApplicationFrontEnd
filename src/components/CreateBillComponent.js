@@ -44,7 +44,7 @@ const CreateBillComponent = () => {
                         <div className = "card-body">
                             <Form>
                             <div className = "form-group mb-2" >
-                                    <label className = "form-label">Status </label> <br/>
+                                    <label className = "form-label">Status:</label> <br/>
                                     <input type = "text" 
                                     placeholder ="Enter Status" 
                                     name = "status"
@@ -56,7 +56,7 @@ const CreateBillComponent = () => {
                                 </div>
 
                                 <div className = "form-group mb-2" >
-                                    <label className = "form-label">Payee </label> <br/>
+                                    <label className = "form-label">Payee:</label> <br/>
                                     <input type = "text" 
                                     placeholder ="Enter Payee Info" 
                                     name = "payee"
@@ -69,7 +69,7 @@ const CreateBillComponent = () => {
 
 
                                 <div className = "form-group mb-2" >
-                                    <label className = "form-label"> CreationDate </label> <br/>
+                                    <label className = "form-label">CreationDate:</label> <br/>
                                     <input type = "text" 
                                     placeholder ="Enter Creation Date" 
                                     name = "firstName"
@@ -84,7 +84,7 @@ const CreateBillComponent = () => {
                                 
                                 
                                 <div className = "form-group mb-2" >
-                                    <label className = "form-label">PaymentDate </label> <br/>
+                                    <label className = "form-label">PaymentDate:</label> <br/>
                                     <input type = "text" 
                                     placeholder ="Enter Payment Date" 
                                     name = "firstName"
@@ -96,7 +96,7 @@ const CreateBillComponent = () => {
                                 </div> 
                                 
                                 <div className = "form-group mb-2" >
-                                    <label className = "form-label"> Nickname </label> <br/>
+                                    <label className = "form-label">Nickname:</label> <br/>
                                     <input type = "text" 
                                     placeholder ="Enter Nickname" 
                                     name = "firstName"
@@ -108,7 +108,7 @@ const CreateBillComponent = () => {
                                 </div> 
                                 
                                 <div className = "form-group mb-2" >
-                                    <label className = "form-label">ReccurringDate </label> <br/>
+                                    <label className = "form-label">ReccurringDate:</label> <br/>
                                     <input type = "text" 
                                     placeholder ="Enter Reccurring Date" 
                                     name = "firstName"
@@ -120,7 +120,7 @@ const CreateBillComponent = () => {
                                 </div> 
                                 
                                 <div className = "form-group mb-2" >
-                                    <label className = "form-label">Upcoming Payment Date</label> <br/>
+                                    <label className = "form-label">Upcoming Payment Date:</label> <br/>
                                     <input type = "text" 
                                     placeholder ="Enter Upcoming Payment Date" 
                                     name = "firstName"
@@ -133,7 +133,7 @@ const CreateBillComponent = () => {
 
                             {/* First name field in my rest api */}
                                 <div className = "form-group mb-2" >
-                                    <label className = "form-label">Payment Amount</label> <br/>
+                                    <label className = "form-label">Payment Amount:</label> <br/>
                                     <input type = "text" 
                                     placeholder ="Enter Payment Amount" 
                                     name = "firstName"
@@ -147,7 +147,7 @@ const CreateBillComponent = () => {
 
                                 {/* Last name field in my rest api */}
                                 <div className = "form-group mb-2" >
-                                    <label className = "form-label"> Account Type </label> <br/>
+                                    <label className = "form-label">Account Type:</label> <br/>
                                     <input type = "text" 
                                     placeholder ="Enter Account ID" 
                                     name = "lastName"

@@ -67,7 +67,7 @@ const CreateWithdrawalComponent = () => {
                 </div>
 
                 <div className="form-group mb-2">
-                  <label className="form-label">Amount to Withdrawal</label>
+                  <label className="form-label">Amount to Withdrawal:</label>
                   <input
                     type="text"
                     placeholder="Enter Amount"
@@ -81,7 +81,7 @@ const CreateWithdrawalComponent = () => {
                   <label className="form-label"> Description:</label>
                   <input
                     type="text"
-                    placeholder="Enter description"
+                    placeholder="Enter Description"
                     name="description"
                     className="form-control"
                     value={description}
@@ -90,7 +90,7 @@ const CreateWithdrawalComponent = () => {
                 </div>
 
                 <div className="form-group mb-2">
-                  <label className="form-label"> Status</label>
+                  <label className="form-label">Status:</label>
                   <input
                     type="text"
                     placeholder="Enter Status"
@@ -102,7 +102,7 @@ const CreateWithdrawalComponent = () => {
                 </div>
 
                 <div className="form-group mb-2">
-                  <label className="form-label">Payer ID</label>
+                  <label className="form-label">Payer ID:</label>
                   <input
                     type="text"
                     placeholder="Enter Payer ID"
@@ -113,7 +113,7 @@ const CreateWithdrawalComponent = () => {
                   ></input>
                 </div>
                 <div className="form-group mb-2">
-                  <label className="form-label">Account Type</label>
+                  <label className="form-label">Account Type:</label>
                   <input
                     type="text"
                     placeholder="Enter Account Type"
@@ -124,7 +124,7 @@ const CreateWithdrawalComponent = () => {
                   ></input>
                 </div>
                 <div className="form-group mb-2">
-                  <label className="form-label">Account ID</label>
+                  <label className="form-label">Account ID:</label>
                   <input
                     type="text"
                     placeholder="Enter Account ID"
