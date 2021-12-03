@@ -11,6 +11,7 @@ import CreateDepositsComponent from "./components/CreateDepositsComponent";
 
 import DisplayAccountsComponent from './components/DisplayAccountsComponent';
 import DisplayCustomersComponent from "./components/DisplayCustomersComponent";
+import DisplayBillsComponent from './components/DisplayBillsComponent'
 
 import ReRouterComponent from './components/ReRouterComponent';
 
@@ -35,6 +36,7 @@ const App = () => {
          
           <Route exact path="/accounts" element={<DisplayAccountsComponent />} />
           <Route exact path="/customers" element={<DisplayCustomersComponent />} />
+          <Route exact path="/bills" element={<DisplayBillsComponent />} />
 
           <Route exact path="/create-account" element={<CreateAccountComponent />} />
           <Route exact path="/create-customer" element={<CreateCustomerComponent />} />

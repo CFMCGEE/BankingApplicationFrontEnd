@@ -17,7 +17,7 @@ const CreateBillComponent = () => {
     const navigate = useNavigate('')
 
     
-    const makEABILL = (e) => {
+    const makeABill = (e) => {
         e.preventDefault();
     const bill = {
         status,payee,nickname,creation_date,payment_date,reccurring_date,upcoming_payment_date, payment_amount,account
@@ -83,12 +83,8 @@ const CreateBillComponent = () => {
    
     return(
         <div>
-
-
-            <h1>Post A Bill</h1>
-           
-
-            <div className = "container">
+        
+            <div className = "container mt-5 mt-5">
                 <div className = "row">
                     <div  className = "card col-md-6 offset-md-3 offset-md-3">
                         <h2 className = "text-center">Post A Bill</h2>
@@ -212,14 +208,14 @@ const CreateBillComponent = () => {
                                 </div>
 
 
-                                <button className ="btn btn-success" onClick = {(e) => makEABILL(e)}> Make A Bill</button>
-                                {/* TO DO */}
+                                <button className ="btn btn-success" onClick = {(e) => makeABill(e)}> Submit</button>
+                                {/* TO DO
                                 {/* use my editBill function */}
-                                <button className ="btn btn-success" onClick = {(e) => editBill(e)}> Edit A Bill</button>
+                                {/* <button className ="btn btn-success" onClick = {(e) => editBill(e)}> Edit A Bill</button> */}
                                  {/* TO DO */}
                                 {/* use my delete Bill function */}
-                                <button className ="btn btn-success" onClick = {(e) => makEABILL(e)}> Delete A Bill</button>
-                                <Link to = "/" className="btn btn-danger"> Cancel</Link>
+                                {/* <button className ="btn btn-success" onClick = {(e) => makEABILL(e)}> Delete A Bill</button> */}
+                                <Link to = "/bills" className="btn btn-danger"> Cancel</Link>
 
                             </form>
                         </div>
