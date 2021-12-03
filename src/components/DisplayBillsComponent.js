@@ -1,9 +1,12 @@
+// eslint-disable-next-line
 import React, { useEffect, useState, useParams } from 'react'
+// eslint-disable-next-line
 import BillService from '../services/BillService';
 import {Link} from 'react-router-dom'
 
 const DisplayBillsComponent = () => {
-    
+
+    // eslint-disable-next-line
     const[bills, setBills] = useState([]);
     //const {id} = useParams();
 
