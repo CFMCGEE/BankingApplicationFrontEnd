@@ -83,6 +83,7 @@ useEffect(() => {
                             <td class="bg-info">                             
                                 <Link className= "btn btn-primary" to={`/update-account/${account.id}`}>Update</Link>
                                 <Button className = "btn btn-danger" onClick={() => deleteAccount(account.id)} style={{marginLeft:"10px"}}>Erase</Button>
+                                <Link className= "btn btn-primary" to={`/view-bills/${account.id}`}>View Bills</Link>
                             </td>
                             </tr>
                            )
