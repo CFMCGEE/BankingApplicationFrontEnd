@@ -12,9 +12,10 @@ const HeaderComponent = () => {
       <Nav className="me-auto">
       <NavDropdown className ="fancy_text" title="Pages" id="basic-nav-dropdown">
       <NavDropdown.Item href="/create-account">Create Account</NavDropdown.Item>
+      <NavDropdown.Item href="/create-bill">Create Bill</NavDropdown.Item>
       <NavDropdown.Item href="/create-customer">Create Customer</NavDropdown.Item>
       <NavDropdown.Item href="/create-deposit">Create Deposit</NavDropdown.Item>
-      <NavDropdown.Item href="/create-bill">Create Bill</NavDropdown.Item>
+      <NavDropdown.Item href="/create-withdrawal">Create Withdrawal</NavDropdown.Item>
       <NavDropdown.Divider />
       <NavDropdown.Item href="/accounts">List of Accounts</NavDropdown.Item>
       <NavDropdown.Item href="/customers">List of Customers</NavDropdown.Item>

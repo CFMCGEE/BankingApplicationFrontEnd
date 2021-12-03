@@ -81,7 +81,7 @@ const CreateAccountComponent = () => {
             <div className="card-body">
               <Form>
                 <div className="form-group mb-2">
-                  <label className="form-label">Type </label>
+                  <label className="form-label">Account Type</label>
                   <input
                     type="text"
                     placeholder="Enter Account Type"
@@ -93,7 +93,7 @@ const CreateAccountComponent = () => {
                 </div>
 
                 <div className="form-group mb-2">
-                  <label className="form-label">Nickname </label>
+                  <label className="form-label">Nickname</label>
                   <input
                     type="text"
                     placeholder="Enter Account Nickname"

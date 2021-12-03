@@ -8,6 +8,7 @@ import CreateAccountComponent from "./components/CreateAccountComponent";
 import CreateCustomerComponent from "./components/CreateCustomerComponent";
 import CreateBillComponent from './components/CreateBillComponent';
 import CreateDepositsComponent from "./components/CreateDepositsComponent";
+import CreateWithdrawalComponent from "./components/CreateWithdrawalComponent";
 
 import DisplayAccountsComponent from './components/DisplayAccountsComponent';
 import DisplayCustomersComponent from "./components/DisplayCustomersComponent";
@@ -35,13 +36,14 @@ const App = () => {
 
           <Route exact path="/" element={<ReRouterComponent />}> </Route>
          
-          <Route exact path="/accounts" element={<DisplayAccountsComponent />} />
-          <Route exact path="/customers" element={<DisplayCustomersComponent />} />
-
           <Route exact path="/create-account" element={<CreateAccountComponent />} />
+          <Route exact path="/create-bill" element={<CreateBillComponent />} />
           <Route exact path="/create-customer" element={<CreateCustomerComponent />} />
           <Route exact path="/create-deposit" element={<CreateDepositsComponent />} />
-          <Route exact path="/create-bill" element={<CreateBillComponent />} />
+          <Route exact path="/create-withdrawal" element={<CreateWithdrawalComponent />} />
+
+          <Route exact path="/accounts" element={<DisplayAccountsComponent />} />
+          <Route exact path="/customers" element={<DisplayCustomersComponent />} />
 
           <Route exact path="/update-account/:id" element={<CreateAccountComponent />} />
           <Route exact path="/update-customer/:id" element={<CreateCustomerComponent />} />

@@ -1,50 +1,32 @@
 import React, { useState } from "react";
+import { Button, Form } from 'react-bootstrap';
 import { useNavigate, Link } from "react-router-dom";
-import DepositsService from "../services/DepositService";
+import WithdrawalsService from "../services/WithdrawalsService";
 
-const CreateDepositsComponent = () => {
-  // const [deposits, setDeposits] = useState([]);
-
-  // useEffect(() =>{
-  //   getDepositsByAccountId();
-  // }, []);
-
-  // const deleteDeposits = (depositsId) =>{
-  //   DepositsService.deleteDeposits(depositsId).then((response) =>{
-  //     getDepositsByAccountId();
-  //   }).catch((error) =>{
-  //     console.log(error);
-  //   });
-  // };
+const CreateWithdrawalComponent = () => {
 
   const [medium, setMedium] = useState("");
   const [transaction_date, setTransaction_date] = useState("");
   const [amount, setAmount] = useState("");
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("");
-  const [payee_id, setPayee_id] = useState("");
+  const [payer_id, setPayer_id] = useState("");
   const [type, setType] = useState("");
   const [account] = useState({ id: "" });
 
   const navigate = useNavigate();
-  const createDeposits = (e) => {
+
+  const createWithdrawal = (e) => {
     e.preventDefault();
 
-    const deposit = {
-      medium,
-      transaction_date,
-      amount,
-      description,
-      status,
-      payee_id,
-      type,
-      account,
-    };
+    const withdrawal = { medium, transaction_date, amount, description, status, payer_id, type, account };
 
-    DepositsService.createDeposits(deposit)
-      .then((response) => {
+    WithdrawalsService.postWithdrawals(withdrawal).then((response) => {
+
         console.log(response.data);
-        navigate("/");
+
+        navigate("/accounts");
+
       })
       .catch((error) => {
         console.log(error);
@@ -57,15 +39,15 @@ const CreateDepositsComponent = () => {
       <br />
         <div className="row">
           <div style={{ backgroundColor: "#00a86b", color: "#FFFFFF" }} className="card col-md-6 offset-md-3 offset-md-3">
-          <h2 className="text-center">Create Deposit</h2>
+          <h2 className="text-center">Create Withdrawal</h2>
             <div className="card-body">
-              <form>
+              <Form>
                 <div className="form-group mb-2">
                   <label className="form-label"> Medium:</label>
                   <input
                     type="text"
                     placeholder="Enter Medium"
-                    name="customerName"
+                    name="medium"
                     className="form-control"
                     value={medium}
                     onChange={(e) => setMedium(e.target.value)}
@@ -76,8 +58,8 @@ const CreateDepositsComponent = () => {
                   <label className="form-label"> Transaction Date:</label>
                   <input
                     type="text"
-                    placeholder="Transaction Date"
-                    name="crustChoice"
+                    placeholder="Enter Transaction Date"
+                    name="transaction_date"
                     className="form-control"
                     value={transaction_date}
                     onChange={(e) => setTransaction_date(e.target.value)}
@@ -85,11 +67,11 @@ const CreateDepositsComponent = () => {
                 </div>
 
                 <div className="form-group mb-2">
-                  <label className="form-label"> Amount to Deposit</label>
+                  <label className="form-label">Amount to Withdrawal</label>
                   <input
                     type="text"
-                    placeholder="Enter Amount To Deposit"
-                    name="toppings"
+                    placeholder="Enter Amount"
+                    name="amount"
                     className="form-control"
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
@@ -99,8 +81,8 @@ const CreateDepositsComponent = () => {
                   <label className="form-label"> Description:</label>
                   <input
                     type="text"
-                    placeholder="Deposit Description"
-                    name="crustChoice"
+                    placeholder="Enter description"
+                    name="description"
                     className="form-control"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
@@ -111,8 +93,8 @@ const CreateDepositsComponent = () => {
                   <label className="form-label"> Status</label>
                   <input
                     type="text"
-                    placeholder="Whats the status"
-                    name="crustChoice"
+                    placeholder="Enter Status"
+                    name="status"
                     className="form-control"
                     value={status}
                     onChange={(e) => setStatus(e.target.value)}
@@ -120,42 +102,42 @@ const CreateDepositsComponent = () => {
                 </div>
 
                 <div className="form-group mb-2">
-                  <label className="form-label"> Payee ID</label>
+                  <label className="form-label">Payer ID</label>
                   <input
                     type="text"
-                    placeholder="Enter Payee Id"
-                    name="crustChoice"
+                    placeholder="Enter Payer ID"
+                    name="payer_id"
                     className="form-control"
-                    value={payee_id}
-                    onChange={(e) => setPayee_id(e.target.value)}
+                    value={payer_id}
+                    onChange={(e) => setPayer_id(e.target.value)}
                   ></input>
                 </div>
                 <div className="form-group mb-2">
-                  <label className="form-label"> Type </label>
+                  <label className="form-label">Account Type</label>
                   <input
                     type="text"
-                    placeholder="Enter Type"
-                    name="crustChoice"
+                    placeholder="Enter Account Type"
+                    name="type"
                     className="form-control"
                     value={type}
                     onChange={(e) => setType(e.target.value)}
                   ></input>
                 </div>
                 <div className="form-group mb-2">
-                  <label className="form-label"> Account </label>
+                  <label className="form-label">Account ID</label>
                   <input
                     type="text"
-                    placeholder="Enter Account"
-                    name="crustChoice"
+                    placeholder="Enter Account ID"
+                    name="account"
                     className="form-control"
                     onChange={(e) => account.id = (e.target.value)}
                   ></input>
                 </div>
 
-                <button className="btn btn-primary" onClick={(e) => createDeposits(e)}>Submit</button>
-                <Link to="/" className="btn btn-danger" style={{ marginLeft: "147px" }}>Cancel</Link>
+                <Button className="btn btn-primary" onClick={(e) => createWithdrawal(e)}>Submit</Button>
+                <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "147px" }}>Cancel</Link>
             
-              </form>
+              </Form>
             </div>
           </div>
         </div>
@@ -164,4 +146,4 @@ const CreateDepositsComponent = () => {
   );
 };
 
-export default CreateDepositsComponent;
+export default CreateWithdrawalComponent;
