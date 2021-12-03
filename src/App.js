@@ -22,13 +22,13 @@ const App = () => {
 
   return (
     
-    <div className= "page">
+    <div>
 
       <header> <HeaderComponent /> </header>
 
        <main>  </main>
 
-      <div className="containerD">
+      <div className="container">
       
         <Routes>
 

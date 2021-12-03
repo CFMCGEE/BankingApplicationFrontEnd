@@ -88,19 +88,11 @@ body {
   position: absolute;
   bottom: 0;
   width:100%;
-  height: 2.5rem;;
+  height: 50px;
   background-color: #0D6EFD;
   text-align: center; 
-
 }
 
-.page{
-  position: relative;
-  min-height: 110vh;
-}
-.containerD{
-  padding-bottom: 2.5rem; 
-}
 .text_footer {
   font-family: 'Allerta Stencil', sans-serif;
   color: white;
