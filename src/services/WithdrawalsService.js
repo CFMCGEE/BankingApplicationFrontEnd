@@ -8,6 +8,10 @@ class WithdrawalsService {
     return axios.post(WITHDRAWALS_BASE_REST_API_URL + "/accounts/withdrawals", withdrawals);
   }
 
+  getEveryWithdrawalByID(id) {
+    return axios.get(WITHDRAWALS_BASE_REST_API_URL + `/accounts/${id}/withdrawals`)
+  }
+
   deleteWithdrawal(id) {
     return axios.delete(WITHDRAWALS_BASE_REST_API_URL + id)
   }

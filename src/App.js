@@ -11,7 +11,9 @@ import CreateDepositsComponent from "./components/CreateDepositsComponent";
 import CreateWithdrawalComponent from "./components/CreateWithdrawalComponent";
 
 import DisplayAccountsComponent from './components/DisplayAccountsComponent';
-import DisplayCustomersComponent from "./components/DisplayCustomersComponent";
+import DisplayCustomersComponent from './components/DisplayCustomersComponent';
+import DisplayWithdrawalsComponent from './components/DisplayWithdrawalsComponent'
+
 // eslint-disable-next-line
 import DisplayBillsComponent from './components/DisplayBillsComponent'
 
@@ -47,6 +49,8 @@ const App = () => {
 
           <Route exact path="/update-account/:id" element={<CreateAccountComponent />} />
           <Route exact path="/update-customer/:id" element={<CreateCustomerComponent />} />
+
+          <Route exact path="/view-withdrawals/:id" element={<DisplayWithdrawalsComponent />} />
 
         </Routes>
 

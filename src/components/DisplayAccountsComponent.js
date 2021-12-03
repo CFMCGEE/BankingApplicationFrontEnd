@@ -5,7 +5,7 @@ import { Table, Button, InputGroup, FormControl } from 'react-bootstrap';
 
 const DisplayAccountsComponent = () => {
 
-const [account, setaccount] = useState([])
+const [account, setAccount] = useState([])
 const [search, setSearch] = useState("")
 
 useEffect(() => {
@@ -16,7 +16,7 @@ useEffect(() => {
 
     const getAllAccounts = () => {
         AccountService.getAllAccounts().then((response) => {
-            setaccount(response.data)
+            setAccount(response.data)
             console.log(response.data)
         }).catch(error =>{
             console.log(error);
@@ -82,7 +82,8 @@ useEffect(() => {
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{account.balance}</td>
                             <td class="bg-info">                             
                                 <Link className= "btn btn-primary" to={`/update-account/${account.id}`}>Update</Link>
-                                <Button className = "btn btn-danger" onClick={() => deleteAccount(account.id)} style={{marginLeft:"10px"}}>Erase</Button>
+                                <Button className = "btn btn-danger" onClick={() => deleteAccount(account.id)} style={{marginLeft:"10px"}}>Remove Account</Button>
+                                <Link className= "btn btn-primary" to={`/view-withdrawals/${account.id}`} style={{marginLeft:"10px"}}>View Withdrawals</Link>
                             </td>
                             </tr>
                            )
