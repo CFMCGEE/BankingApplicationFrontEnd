@@ -47,7 +47,7 @@ const ListCustomerComponent = () => {
       />
       <table className="table table-bordered table-striped">
         <thead>
-          <th>Customer Id</th>
+          <th>Customer ID</th>
           <th>First Name</th>
           <th>Last Name</th>
           <th>Actions</th>
@@ -69,7 +69,7 @@ const ListCustomerComponent = () => {
                 <td>
                   <Link to={`/edit-customer/${customer.id}`} className="btn btn-primary">
                     Update Customer
-                  </Link>
+                  </Link> 
                 </td>
               </tr>
             ))}

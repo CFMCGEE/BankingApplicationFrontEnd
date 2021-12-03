@@ -1,52 +1,28 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 
 const HeaderComponent = () => {
+
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <NavLink className="navbar-brand" to="/">
-          One Piece of Bread Banking
-        </NavLink>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <NavLink className="nav-link" to="/accounts">
-                Add account
-              </NavLink>
-            </li>
-            <li class="nav-item active">
-              <NavLink className="nav-link" to="/deposits">
-                Deposit Add
-              </NavLink>
-            </li>
 
-            <li class="nav-item active">
-              <NavLink className="nav-link" to="/create-customer">
-                Create Customer
-              </NavLink>
-            </li>
+      <Navbar bg="primary" variant="dark">
+      <Container>
+      <Navbar.Brand href="/">One Piece of Bread Banking</Navbar.Brand>
+      <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="me-auto">
+      <NavDropdown title="Pages" id="basic-nav-dropdown">
+      <NavDropdown.Item href="/create-account">Create Account</NavDropdown.Item>
+      <NavDropdown.Item href="/create-customer">Create Customer</NavDropdown.Item>
+      <NavDropdown.Item href="/create-deposit">Create Deposit</NavDropdown.Item>
+      <NavDropdown.Divider />
+      <NavDropdown.Item href="/customers">List of Customers</NavDropdown.Item>
+      <NavDropdown.Item href="/accounts">List of Accounts</NavDropdown.Item>
+      </NavDropdown>
+      </Nav>
+      </Navbar.Collapse>
+      </Container>
+      </Navbar>
 
-            <li class="nav-item active">
-              <NavLink className="nav-link" to="/customers">
-                List of Customers
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
   );
 };
 

@@ -1,13 +1,17 @@
 import React, {useState, useEffect} from 'react'
 import AccountService from '../services/AccountService'
 import { Link } from 'react-router-dom'
+import { Table, Button, InputGroup, FormControl } from 'react-bootstrap';
 
 const DisplayAccounts = () => {
 
 const [account, setaccount] = useState([])
+const [search, setSearch] = useState("")
 
 useEffect(() => {
+
     getAllAccounts();
+
 }, [])
 
     const getAllAccounts = () => {
@@ -19,22 +23,57 @@ useEffect(() => {
         })
     }
 
+    const deleteAccount = (id) => {
+        AccountService.deleteAccount(id).then(() =>{
+         getAllAccounts();
+        }).catch(error =>{
+            console.log(error);
+        })
+         
+     }
+
     return (
         <div>
-            
+
             <h2 className = "text-center"> Accounts</h2>
-            <table className = "table table bordered table-striped">
+            <Link to="/create-account" className="btn btn-primary mb-2">
+              Create Account
+            </Link>
+            <InputGroup className="mb-3">
+                  <FormControl
+                   placeholder="Search acounts"
+                   aria-label="Default"
+                   aria-describedby="inputGroup-sizing-default"
+                   onChange={(event) => {
+                    setSearch(event.target.value);
+                  }}
+                 />
+                 </InputGroup>
+
+            <Table className = "table table bordered table-striped">
             <thead>
-                <th>Id </th>
+
+                <th>Account ID</th>
                 <th>Type</th>
                 <th>Nickname</th>
                 <th>Rewards</th>
                 <th>Balance</th>
-                <th>Ops</th>
+                <th>Actions</th>
+
             </thead>
             <tbody>
-                    {account.map(
-                            account =>
+
+            {/*eslint-disable-next-line*/}
+            {account.filter((accounts) => {
+                                if (search === "") {
+                                    return accounts;
+                                } else if (accounts.nickname.toLowerCase().includes(search.toLowerCase()) || (accounts.type.toLowerCase().includes(search.toLowerCase()))) {
+                                    return accounts;
+                                }
+                            }).map(account => {
+
+                        return (      
+
                         <tr key = {account.id}>
                             <td>{account.id}</td>
                             <td>{account.type}</td>
@@ -42,15 +81,16 @@ useEffect(() => {
                             <td>{account.rewards}</td>
                             <td>{account.balance}</td>
                             <td>
-                                <Link className= "btn btn-info" to={`/${account.id}`}>Change</Link>
-                                <button className = "btn btn-danger" 
-                                style = {{marginLeft:"10px"}}>Erase</button>
+                                <Link className= "btn btn-info" to={`/edit-account/${account.id}`}>Update</Link>
+                                <Button className = "btn btn-danger" onClick={() => deleteAccount(account.id)} style = {{marginLeft:"10px"}}>Erase</Button>
                             </td>
-                        </tr>
-                        )
+                            </tr>
+
+                           )
+                        })
                     }
                 </tbody>
-            </table>
+            </Table>
         </div>
     )
 }

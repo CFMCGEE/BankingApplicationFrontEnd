@@ -13,27 +13,38 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
-  return (
-    <div>
-      <main>
-        <HeaderComponent />
 
-        <FooterComponent />
-      </main>
+  return (
+    
+    <div>
+
+      <header> <HeaderComponent /> </header>
+
+      <main> </main>
+
       <div className="container">
         <Routes>
-          <Route exact path="/" element={<DisplayAccounts />} />
-          <Route exact path="/deposits" element={<DepositsComponent />} />
-          <Route exact path="/accounts" element={<AccountComponent />} />
+
+          <Route exact path="/accounts" element={<DisplayAccounts />} />
           <Route exact path="/customers" element={<ListCustomerComponent />} />
-          <Route exact path="/add-bill" element={<AddBillComponent />} />
-          <Route exact path="/list-customers" element={<ListCustomerComponent />} />
+
+          <Route exact path="/create-account" element={<AccountComponent />} />
           <Route exact path="/create-customer" element={<CreateCustomerComponent />} />
+          <Route exact path="/create-deposit" element={<DepositsComponent />} />
+          <Route exact path="/create-bill" element={<AddBillComponent />} />
+
+          <Route exact path="/edit-account/:id" element={<DisplayAccounts />} />
           <Route exact path="/edit-customer/:id" element={<CreateCustomerComponent />} />
+
         </Routes>
       </div>
+
+      <footer> <FooterComponent /> </footer>
+
     </div>
+
   );
+  
 }
 
 export default App;

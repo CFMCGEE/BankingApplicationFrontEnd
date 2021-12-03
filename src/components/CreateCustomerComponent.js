@@ -90,7 +90,7 @@ const CreateOrUpdateCustomer = () => {
                 ></input>
               </div>
               <button type="submit" className="btn btn-success" onClick={(e) => saveOrUpdateCustomer(e)}>
-                Submit
+                Create
               </button>
               <Link to="/customers" className="btn btn-danger" style={{ marginLeft: "10px" }}>
                 Cancel

@@ -41,7 +41,7 @@ const AddBillComponent = () => {
 
         BillService.createBill(bill).then((response) =>{
             console.log(response.data)
-            navigate('/')
+            navigate('/create-bill')
 
         }).catch((error) =>{
             console.log(error);
