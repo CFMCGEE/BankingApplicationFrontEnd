@@ -161,3 +161,7 @@ header {
 .ACTIONS_adjuster {
     width: 32%;
 }
+
+.CHART_adjuster {
+    margin-left: 100%;
+}
