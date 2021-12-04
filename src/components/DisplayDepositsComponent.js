@@ -48,6 +48,7 @@ const DisplayDepositsComponent = () => {
             <Link to="/accounts" className="btn btn-secondary mb-2">
              Return To Accounts
             </Link>
+            <br />
             <Table className="table table-bordered table-striped">
             <thead> 
 

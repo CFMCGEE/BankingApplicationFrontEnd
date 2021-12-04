@@ -75,6 +75,7 @@ const CreateOrUpdateCustomer = () => {
                   onChange={(e) => setFirstName(e.target.value)}
                 ></input>
               </div>
+              
               <div className="form-group mb-2">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="form-group">
@@ -93,7 +94,7 @@ const CreateOrUpdateCustomer = () => {
               <button type="submit" className="btn btn-primary" onClick={(e) => saveOrUpdateCustomer(e)}>
                 Submit
               </button>
-              <Link to="/customers" className="btn btn-danger" style={{ marginLeft: "147px" }}>
+              <Link to="/customers" className="btn btn-danger" style={{ marginLeft: "453px" }}>
                 Cancel
               </Link>
             </form>

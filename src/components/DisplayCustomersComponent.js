@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CustomerService from "../services/CustomerService";
-
+import { InputGroup, FormControl } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
 const DisplayCustomerComponent = () => {
@@ -35,17 +35,21 @@ const DisplayCustomerComponent = () => {
     <div className="container">
       <br />
       <h2 className="text-center">Customers</h2>
-      <Link to="/create-customer" className="btn btn-primary mb-2">
+      <br /> 
+      {/* <Link to="/create-customer" className="btn btn-primary mb-2">
         Create Customer
-      </Link>
-      <input
+      </Link> */}
+    <InputGroup className="mb-3">
+    <FormControl
         type="text"
         className="form-control"
         placeholder="Search customers"
         onChange={(e) => {
           setQ(e.target.value);
         }}
-      />
+        />
+     </InputGroup>
+      <br /> 
       <table className="table table-bordered table-striped">
         <thead>
           <th>Customer ID</th>

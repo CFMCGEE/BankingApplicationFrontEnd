@@ -65,7 +65,6 @@ const CreateBillComponent = () => {
                                     </input>
                                 </div>
 
-
                                 <div className="form-group mb-2" >
                                     <label className="form-label">Creation Date:</label> <br />
                                     <input type="text"
@@ -76,10 +75,7 @@ const CreateBillComponent = () => {
                                         onChange={(e) => setCreation_date(e.target.value)}
                                     >
                                     </input>
-
-
                                 </div>
-
 
                                 <div className="form-group mb-2" >
                                     <label className="form-label">Payment Date:</label> <br />
@@ -160,7 +156,7 @@ const CreateBillComponent = () => {
                                 {/* TO DO
                                 {/* use my delete Bill function */}
                                 {/* <button className ="btn btn-success" onClick = {(e) => makEABILL(e)}> Delete A Bill</button> */}
-                                <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "147px" }}>Cancel</Link>
+                                <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "453px" }}>Cancel</Link>
 
                             </Form>
                         </div>

@@ -37,9 +37,10 @@ useEffect(() => {
         <div>
           <br />
             <h2 className="text-center"> Accounts</h2>
-            <Link to="/create-account" className="btn btn-primary mb-2">
+            <br /> 
+            {/* <Link to="/create-account" className="btn btn-primary mb-2">
               Create Account
-            </Link>
+            </Link> */}
             <InputGroup className="mb-3">
                   <FormControl
                    placeholder="Search acounts"
@@ -50,7 +51,7 @@ useEffect(() => {
                   }}
                  />
                  </InputGroup>
-
+                 <br /> 
             <Table className="table table-bordered table-striped">
             <thead> 
 

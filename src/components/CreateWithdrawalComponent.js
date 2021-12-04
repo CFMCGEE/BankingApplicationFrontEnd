@@ -77,6 +77,7 @@ const CreateWithdrawalComponent = () => {
                     onChange={(e) => setAmount(e.target.value)}
                   ></input>
                 </div>
+                
                 <div className="form-group mb-2">
                   <label className="form-label"> Description:</label>
                   <input
@@ -135,7 +136,7 @@ const CreateWithdrawalComponent = () => {
                 </div>
 
                 <Button className="btn btn-primary" onClick={(e) => createWithdrawal(e)}>Submit</Button>
-                <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "147px" }}>Cancel</Link>
+                <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "453px" }}>Cancel</Link>
             
               </Form>
             </div>

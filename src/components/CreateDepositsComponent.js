@@ -82,6 +82,7 @@ const CreateDepositsComponent = () => {
                     onChange={(e) => setAmount(e.target.value)}
                   ></input>
                 </div>
+                
                 <div className="form-group mb-2">
                   <label className="form-label"> Description:</label>
                   <input
@@ -140,7 +141,7 @@ const CreateDepositsComponent = () => {
                 </div>
 
                 <button className="btn btn-primary" onClick={(e) => createDeposits(e)}>Submit</button>
-                <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "147px" }}>Cancel</Link>
+                <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "453px" }}>Cancel</Link>
             
               </form>
             </div>

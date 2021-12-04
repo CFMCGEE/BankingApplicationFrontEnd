@@ -44,9 +44,11 @@ const DisplayBillsComponent = () => {
     return (
         <div>
             <h2 className="text-center mt-5">Bills</h2>
+            <br /> 
             <Link to="/accounts" className="btn btn-secondary mb-2">
              Return To Accounts
             </Link>
+            <br /> 
             <table className="table table-bordered table-striped">
                 <thead>
 
