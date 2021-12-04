@@ -1,12 +1,9 @@
-// eslint-disable-next-line
 import React, { useEffect, useState } from 'react'
-// eslint-disable-next-line
 import BillService from '../services/BillService';
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const DisplayBillsComponent = () => {
 
- 
     const[bills, setBills] = useState([]);
     const {id} = useParams();
 
@@ -14,6 +11,7 @@ const DisplayBillsComponent = () => {
 
         getBillsByAccountId();
 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
      }, []);
 
      const getBillsByAccountId = () => {
@@ -29,8 +27,12 @@ const DisplayBillsComponent = () => {
     return (
         <div>
             <h2 className="text-center mt-5">Bills</h2>
+            <Link to="/accounts" className="btn btn-secondary mb-2">
+             Return To Accounts
+            </Link>
             <table className="table table-bordered table-striped">
                 <thead>
+
                     <th>Bill ID</th>
                     <th>Status</th>
                     <th>Payee</th>
@@ -40,13 +42,16 @@ const DisplayBillsComponent = () => {
                     <th>Recurring Date</th>
                     <th>Upcoming Payment</th>
                     <th>Payment Amount</th>
-                    <th>Account</th>
-                    <th>Actions</th>
+                    <th>Transaction Options</th>
+
                 </thead>
                 <tbody>
                     {
-                        
-                        bills.map(bill =>
+
+                        bills.map(bill => {
+                            
+                            return (
+
                                 <tr key={bill.id}>
                                     <td>{bill.id}</td>
                                     <td>{bill.status}</td>
@@ -57,9 +62,9 @@ const DisplayBillsComponent = () => {
                                     <td>{bill.recurring_date}</td>
                                     <td>{bill.upcoming_payment_date}</td>
                                     <td>{bill.payment_amount}</td>
-                                    
                                 </tr>
-                        )
+                            )
+                        })
                     }
                 </tbody>
             </table>

@@ -3,19 +3,6 @@ import { useNavigate, Link } from "react-router-dom";
 import DepositsService from "../services/DepositService";
 
 const CreateDepositsComponent = () => {
-  // const [deposits, setDeposits] = useState([]);
-
-  // useEffect(() =>{
-  //   getDepositsByAccountId();
-  // }, []);
-
-  // const deleteDeposits = (depositsId) =>{
-  //   DepositsService.deleteDeposits(depositsId).then((response) =>{
-  //     getDepositsByAccountId();
-  //   }).catch((error) =>{
-  //     console.log(error);
-  //   });
-  // };
 
   const [medium, setMedium] = useState("");
   const [transaction_date, setTransaction_date] = useState("");
@@ -44,7 +31,7 @@ const CreateDepositsComponent = () => {
     DepositsService.createDeposits(deposit)
       .then((response) => {
         console.log(response.data);
-        navigate("/");
+        navigate("/accounts");
       })
       .catch((error) => {
         console.log(error);
@@ -65,7 +52,7 @@ const CreateDepositsComponent = () => {
                   <input
                     type="text"
                     placeholder="Enter Medium"
-                    name="customerName"
+                    name="medium"
                     className="form-control"
                     value={medium}
                     onChange={(e) => setMedium(e.target.value)}
@@ -77,7 +64,7 @@ const CreateDepositsComponent = () => {
                   <input
                     type="text"
                     placeholder="Transaction Date"
-                    name="crustChoice"
+                    name="transaction_date"
                     className="form-control"
                     value={transaction_date}
                     onChange={(e) => setTransaction_date(e.target.value)}
@@ -89,7 +76,7 @@ const CreateDepositsComponent = () => {
                   <input
                     type="text"
                     placeholder="Enter Amount To Deposit"
-                    name="toppings"
+                    name="amount"
                     className="form-control"
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
@@ -100,7 +87,7 @@ const CreateDepositsComponent = () => {
                   <input
                     type="text"
                     placeholder="Deposit Description"
-                    name="crustChoice"
+                    name="description"
                     className="form-control"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
@@ -112,7 +99,7 @@ const CreateDepositsComponent = () => {
                   <input
                     type="text"
                     placeholder="Whats the status"
-                    name="crustChoice"
+                    name="status"
                     className="form-control"
                     value={status}
                     onChange={(e) => setStatus(e.target.value)}
@@ -120,40 +107,40 @@ const CreateDepositsComponent = () => {
                 </div>
 
                 <div className="form-group mb-2">
-                  <label className="form-label"> Payee ID:</label>
+                  <label className="form-label">Payee ID:</label>
                   <input
                     type="text"
-                    placeholder="Enter Payee Id"
-                    name="crustChoice"
+                    placeholder="Enter Payee ID"
+                    name="payee_id"
                     className="form-control"
                     value={payee_id}
                     onChange={(e) => setPayee_id(e.target.value)}
                   ></input>
                 </div>
                 <div className="form-group mb-2">
-                  <label className="form-label"> Type:</label>
+                  <label className="form-label">Type:</label>
                   <input
                     type="text"
                     placeholder="Enter Type"
-                    name="crustChoice"
+                    name="type"
                     className="form-control"
                     value={type}
                     onChange={(e) => setType(e.target.value)}
                   ></input>
                 </div>
                 <div className="form-group mb-2">
-                  <label className="form-label"> Account:</label>
+                  <label className="form-label">Account ID:</label>
                   <input
                     type="text"
-                    placeholder="Enter Account"
-                    name="crustChoice"
+                    placeholder="Enter Account ID"
+                    name="accocunt"
                     className="form-control"
                     onChange={(e) => account.id = (e.target.value)}
                   ></input>
                 </div>
 
                 <button className="btn btn-primary" onClick={(e) => createDeposits(e)}>Submit</button>
-                <Link to="/" className="btn btn-danger" style={{ marginLeft: "147px" }}>Cancel</Link>
+                <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "147px" }}>Cancel</Link>
             
               </form>
             </div>

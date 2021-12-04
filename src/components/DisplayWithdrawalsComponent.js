@@ -12,6 +12,7 @@ const DisplayWithdrawalsComponent = () => {
 
         getEveryWithdrawalByID();
 
+       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const getEveryWithdrawalByID = () => {
@@ -25,14 +26,17 @@ const DisplayWithdrawalsComponent = () => {
         
     }
 
-    const completeTransaction = () => {
+    const completeTransaction = (id) => {
 
-        WithdrawalsService.deleteWithdrawal(id).then((response) => {
-            getEveryWithdrawalByID();
-            console.log(response.data.data)
-        }).catch(error =>{
-            console.log(error);
-        })
+            WithdrawalsService.deleteWithdrawal(id).then(() => {
+
+                console.log(id)
+
+                getEveryWithdrawalByID();
+
+            }).catch(error =>{
+                console.log(error);
+            })
 
     }
 
@@ -41,14 +45,13 @@ const DisplayWithdrawalsComponent = () => {
         <div>
           <br />
             <h2 className="text-center">Withdrawals</h2>
-            <Link to="/create-account" className="btn btn-primary mb-2">
-              Create Withdrawal
+            <Link to="/accounts" className="btn btn-secondary mb-2">
+             Return To Accounts
             </Link>
             <Table className="table table-bordered table-striped">
             <thead> 
 
                 <th>Withdrawal ID</th>
-                <th>Acount ID</th>
                 <th>Medium</th>
                 <th>Transaction Date</th>
                 <th>Amount</th>
@@ -56,6 +59,7 @@ const DisplayWithdrawalsComponent = () => {
                 <th>Status</th>
                 <th>Payer ID</th>
                 <th>Type</th>
+                <th>Transaction Options</th>
                 
 
             </thead>
@@ -66,13 +70,17 @@ const DisplayWithdrawalsComponent = () => {
                         return (      
 
                         <tr key = {withdrawals.id}>
+
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{withdrawals.id}</td>
-                            <td style={{ color: "#FFFFFF" }} class="bg-info">{withdrawals.account.id}</td>
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{withdrawals.medium}</td>
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{withdrawals.transaction_date}</td>
-                            <td style={{ color: "#FFFFFF" }} class="bg-info">{withdrawals.balance}</td>
+                            <td style={{ color: "#FFFFFF" }} class="bg-info">{withdrawals.amount}</td>
+                            <td style={{ color: "#FFFFFF" }} class="bg-info">{withdrawals.description}</td>
+                            <td style={{ color: "#FFFFFF" }} class="bg-info">{withdrawals.status}</td>
+                            <td style={{ color: "#FFFFFF" }} class="bg-info">{withdrawals.payer_id}</td>
+                            <td style={{ color: "#FFFFFF" }} class="bg-info">{withdrawals.type}</td>
                             <td class="bg-info">                             
-                                <Button className = "btn btn-danger" onClick={() => completeTransaction(withdrawals.id)} style={{marginLeft:"10px"}}>Complete Transaction</Button>
+                                <Button className = "btn btn-success" onClick={() => completeTransaction(withdrawals.id)} style={{ marginLeft:"10px" }}>Complete Withdrawal</Button>
                             </td>
                             </tr>
                            )

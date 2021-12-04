@@ -13,7 +13,7 @@ class WithdrawalsService {
   }
 
   deleteWithdrawal(id) {
-    return axios.delete(WITHDRAWALS_BASE_REST_API_URL + id)
+    return axios.delete(WITHDRAWALS_BASE_REST_API_URL + `/${id}`) 
   }
 
 }

@@ -54,12 +54,12 @@ useEffect(() => {
             <Table className="table table-bordered table-striped">
             <thead> 
 
-                <th>Account ID</th>
-                <th>Type</th>
-                <th>Nickname</th>
-                <th>Rewards</th>
-                <th>Balance</th>
-                <th>Actions</th>
+                <th className="ID_adjuster">Account ID</th>
+                <th className="TYPE_adjuster">Type</th>
+                <th className="NICKNAME_adjuster">Nickname</th>
+                <th className="REWARDS_adjuster">Rewards</th>
+                <th className="BALANCE_adjuster">Balance</th>
+                <th className="ACTIONS_adjuster">Actions</th>
 
             </thead>
             <tbody>
@@ -81,10 +81,11 @@ useEffect(() => {
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{account.rewards}</td>
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{account.balance}</td>
                             <td class="bg-info">                             
-                                <Link className= "btn btn-primary" to={`/update-account/${account.id}`}>Update</Link>
-                                <Button className = "btn btn-danger" onClick={() => deleteAccount(account.id)} style={{marginLeft:"10px"}}>Remove Account</Button>
-                                <Link className= "btn btn-primary" to={`/view-bills/${account.id}`}>View Bills</Link>
-                                <Link className= "btn btn-primary" to={`/view-withdrawals/${account.id}`} style={{marginLeft:"10px"}}>View Withdrawals</Link>
+                                {/* <Link className= "btn btn-primary" to={`/update-account/${account.id}`}>Update</Link> */}
+                                <Link className="btn btn-dark" to={`/view-bills/${account.id}`}  style={{marginLeft:"10px"}}>View Bills</Link>
+                                <Link className="btn btn-light" to={`/view-deposits/${account.id}`} style={{marginLeft:"10px"}}>View Deposits</Link>
+                                <Link className="btn btn-dark" to={`/view-withdrawals/${account.id}`} style={{marginLeft:"10px"}}>View Withdrawals</Link>
+                                <Button className="btn btn-danger" onClick={() => deleteAccount(account.id)} style={{marginLeft:"10px"}}>Remove Account</Button>
                             </td>
                             </tr>
                            )

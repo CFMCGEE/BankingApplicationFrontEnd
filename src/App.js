@@ -5,17 +5,16 @@ import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
 
 import CreateAccountComponent from "./components/CreateAccountComponent";
-import CreateCustomerComponent from "./components/CreateCustomerComponent";
 import CreateBillComponent from './components/CreateBillComponent';
+import CreateCustomerComponent from "./components/CreateCustomerComponent";
 import CreateDepositsComponent from "./components/CreateDepositsComponent";
 import CreateWithdrawalComponent from "./components/CreateWithdrawalComponent";
 
 import DisplayAccountsComponent from './components/DisplayAccountsComponent';
-import DisplayCustomersComponent from './components/DisplayCustomersComponent';
-import DisplayWithdrawalsComponent from './components/DisplayWithdrawalsComponent'
-
-// eslint-disable-next-line
 import DisplayBillsComponent from './components/DisplayBillsComponent'
+import DisplayCustomersComponent from './components/DisplayCustomersComponent';
+import DisplayDepositsComponent from './components/DisplayDepositsComponent';
+import DisplayWithdrawalsComponent from './components/DisplayWithdrawalsComponent'
 
 import ReRouterComponent from './components/ReRouterComponent';
 
@@ -52,6 +51,7 @@ const App = () => {
 
           <Route exact path="/view-bills/:id" element={<DisplayBillsComponent />} />
           <Route exact path="/view-withdrawals/:id" element={<DisplayWithdrawalsComponent />} />
+          <Route exact path="/view-deposits/:id" element={<DisplayDepositsComponent />} />
 
         </Routes>
 

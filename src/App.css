@@ -137,3 +137,27 @@ header {
 .ReactTable.-striped.-highlight {
     width: 532px;
 }
+
+.ID_adjuster {
+    width: 8%;
+}
+
+.TYPE_adjuster {
+    width: 6%;
+}
+
+.NICKNAME_adjuster {
+    width: 13%;
+}
+
+.REWARDS_adjuster {
+    width: 6%;
+}
+
+.BALANCE_adjuster {
+    width: 5%;
+}
+
+.ACTIONS_adjuster {
+    width: 32%;
+}
