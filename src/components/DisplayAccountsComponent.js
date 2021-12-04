@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import AccountService from '../services/AccountService'
-// eslint-disable-next-line 
-// import PieChart from './PieChart'
 import { Link } from 'react-router-dom'
 import { Table, Button, InputGroup, FormControl } from 'react-bootstrap';
 
@@ -100,8 +98,7 @@ useEffect(() => {
                         })
                     }
                 </tbody>
-            </Table>
-            {/*<PieChart />*/}          
+            </Table>        
         </div>
 
     )
