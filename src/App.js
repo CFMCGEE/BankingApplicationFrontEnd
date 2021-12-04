@@ -56,7 +56,7 @@ const App = () => {
           <Route exact path="/view-withdrawals/:id" element={<DisplayWithdrawalsComponent />} />
           <Route exact path="/view-deposits/:id" element={<DisplayDepositsComponent />} />
           
-          <Route exact path="/chart" element={<PieChart />} />
+          <Route exact path="/view-account-data-chart/:id" element={<PieChart />} />
 
         </Routes>
 

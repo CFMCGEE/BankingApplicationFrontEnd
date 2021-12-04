@@ -34,6 +34,10 @@ useEffect(() => {
          
      }
 
+    // const successfullyDeletedAccount = () => {
+    //     alert("Account Successfully Deleted!")
+    // }
+
     return (
 
         <div>
@@ -88,6 +92,7 @@ useEffect(() => {
                                 <Link className="btn btn-dark" to={`/view-bills/${account.id}`}  style={{marginLeft:"10px"}}>View Bills</Link>
                                 <Link className="btn btn-light" to={`/view-deposits/${account.id}`} style={{marginLeft:"10px"}}>View Deposits</Link>
                                 <Link className="btn btn-dark" to={`/view-withdrawals/${account.id}`} style={{marginLeft:"10px"}}>View Withdrawals</Link>
+                                <Link className="btn btn-light" to={`/view-account-data-chart/${account.id}`} style={{marginLeft:"10px"}}>View Chart</Link>
                                 <Button className="btn btn-danger" onClick={() => deleteAccount(account.id)} style={{marginLeft:"10px"}}>Remove Account</Button>
                             </td>
                             </tr>

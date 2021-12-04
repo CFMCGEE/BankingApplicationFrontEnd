@@ -118,8 +118,8 @@ header {
     padding-left: var(--bs-gutter-x,.75rem);
     margin-right: auto;
     margin-left: auto;
-    min-width: 1320px;
-    max-width: 1420px;
+    min-width: 1500px;
+    max-width: 1600px;
 
 }
 
@@ -164,4 +164,14 @@ header {
 
 .CHART_adjuster {
     margin-left: 100%;
+}
+
+.NO_DATA_FOUND_text {
+
+    width: 320px;
+    padding: 10px;
+    border: 5px solid rgb(0, 128, 128);
+    margin-left: 35rem;
+    font-size: x-large;
+
 }
