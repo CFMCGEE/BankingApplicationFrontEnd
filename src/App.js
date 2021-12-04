@@ -18,6 +18,9 @@ import DisplayWithdrawalsComponent from './components/DisplayWithdrawalsComponen
 
 import ReRouterComponent from './components/ReRouterComponent';
 
+import PieChart from './chart/PieChart'
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -52,6 +55,8 @@ const App = () => {
           <Route exact path="/view-bills/:id" element={<DisplayBillsComponent />} />
           <Route exact path="/view-withdrawals/:id" element={<DisplayWithdrawalsComponent />} />
           <Route exact path="/view-deposits/:id" element={<DisplayDepositsComponent />} />
+          
+          <Route exact path="/chart" element={<PieChart />} />
 
         </Routes>
 
