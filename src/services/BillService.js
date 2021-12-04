@@ -16,8 +16,8 @@ class BillService{
         return axios.get(BILL_BASE_REST_API_URL + id)
     }
 
-    deleteBill(id, bill) {
-        return axios.delete(BILL_BASE_REST_API_URL + id, bill)
+    deleteBill(id) {
+        return axios.delete(BILL_BASE_REST_API_URL + `/${id}`)
     }
  
     updateBill(id, bill){

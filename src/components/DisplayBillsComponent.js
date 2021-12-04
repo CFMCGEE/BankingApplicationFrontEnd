@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import BillService from '../services/BillService';
 import { Link, useParams } from 'react-router-dom'
+import { Button } from 'react-bootstrap';
 
 const DisplayBillsComponent = () => {
 
@@ -15,13 +16,29 @@ const DisplayBillsComponent = () => {
      }, []);
 
      const getBillsByAccountId = () => {
+
          BillService.getBillsByAccountId(id).then((response) => {
              setBills(response.data.data);
              console.log(response.data.data);
          }).catch(error => {
              console.log(error)
          })
+
      }
+
+     const completeTransaction = (id) => {
+
+        BillService.deleteBill(id).then(() => {
+
+                console.log(id)
+                
+                getBillsByAccountId();
+
+            }).catch(error =>{
+                console.log(error);
+            })
+
+    }
 
 
     return (
@@ -62,6 +79,9 @@ const DisplayBillsComponent = () => {
                                     <td>{bill.recurring_date}</td>
                                     <td>{bill.upcoming_payment_date}</td>
                                     <td>{bill.payment_amount}</td>
+                                    <td>                             
+                                     <Button onClick={() => completeTransaction(bill.id)} style={{ marginLeft: "10px", backgroundColor: "#F8C8DC", borderColor: "#F8C8DC" }}>Pay Bill</Button>
+                                    </td>
                                 </tr>
                             )
                         })

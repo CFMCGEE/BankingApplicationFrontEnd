@@ -80,7 +80,7 @@ const DisplayWithdrawalsComponent = () => {
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{withdrawals.payer_id}</td>
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{withdrawals.type}</td>
                             <td class="bg-info">                             
-                                <Button className = "btn btn-success" onClick={() => completeTransaction(withdrawals.id)} style={{ marginLeft:"10px" }}>Complete Withdrawal</Button>
+                                <Button onClick={() => completeTransaction(withdrawals.id)} style={{ marginLeft: "10px", backgroundColor: "#F8C8DC", borderColor: "#F8C8DC" }}>Complete Withdrawal</Button>
                             </td>
                             </tr>
                            )

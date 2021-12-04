@@ -64,7 +64,6 @@ const DisplayDepositsComponent = () => {
 
             </thead>
             <tbody>
-            {/*eslint-disable-next-line*/}
             {deposits.map(deposit => {
 
                         return (      
@@ -80,7 +79,7 @@ const DisplayDepositsComponent = () => {
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{deposit.payee_id}</td>
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{deposit.type}</td>
                             <td class="bg-info">                             
-                                <Button className = "btn btn-success" onClick={() => completeTransaction(deposit.id)} style={{ marginLeft:"10px" }}>Complete Deposit</Button>
+                                <Button onClick={() => completeTransaction(deposit.id)} style={{ marginLeft: "10px", backgroundColor: "#F8C8DC", borderColor: "#F8C8DC" }}>Complete Deposit</Button>
                             </td>
                             </tr>
                            )
