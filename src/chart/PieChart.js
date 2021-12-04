@@ -2,19 +2,12 @@ import React, { useState, useEffect } from 'react'
 import BillService from "../services/BillService";
 import DepositService from "../services/DepositService";
 import WithdrawalsService from "../services/WithdrawalsService";
-// import AccountService from "../services/AccountService";
-// import { Button } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 // eslint-disable-next-line
 import { Chart as ChartJS } from "chart.js/auto";
 import { Pie } from "react-chartjs-2";
 import {Chart, ArcElement} from 'chart.js'
 Chart.register(ArcElement);
-
-
-
-// defaults.global.tooltips.enabled = false
-// defaults.global.legend.position = 'bottom'
 
 const PieChart = () => {
 
@@ -115,7 +108,6 @@ const getEveryWithdrawalByID = () => {
       console.log("Nothing to see here!")
 
       return <b className="NO_DATA_FOUND_text">No data found in this account...</b>
-
        
   }
 }
