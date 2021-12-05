@@ -14,12 +14,6 @@ const DisplayCustomerComponent = () => {
     },
   ]);
 
-  const csvFile = {
-    id: "",
-    first_Name: "",
-    last_Name: "",
-  };
-
   const [q, setQ] = useState("");
 
   //use effect to fetch the data from the server
@@ -46,14 +40,7 @@ const DisplayCustomerComponent = () => {
       {/* <Link to="/create-customer" className="btn btn-primary mb-2">
         Create Customer
       </Link> */}
-      <ReactHTMLTableToExcel
-        id="test-table-xls-button"
-        className="download-table-xls-button"
-        table="customer-table"
-        filename="customer-list"
-        sheet="tablexls"
-        buttonText="Download as XLS"
-      />
+
       <InputGroup className="mb-3">
         <FormControl
           type="text"
@@ -65,6 +52,15 @@ const DisplayCustomerComponent = () => {
         />
       </InputGroup>
       <br />
+      <ReactHTMLTableToExcel
+        id="test-table-xls-button"
+        className="download-table-xls-button"
+        table="customer-table"
+        filename="customer-list"
+        sheet="One Piece of Bread Banking Customer List"
+        buttonText="Download as XLS"
+        className="btn btn-primary"
+      />
       <table className="table table-bordered table-striped">
         <thead>
           <th>Customer ID</th>

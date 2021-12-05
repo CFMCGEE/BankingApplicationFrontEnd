@@ -104,7 +104,7 @@ const CreateBillComponent = () => {
                                 <div className="form-group mb-2" >
                                     <label className="form-label">Recurring Date:</label> <br />
                                     <input type="text"
-                                        placeholder="Enter Reccurring Date"
+                                        placeholder="Enter Recurring Date"
                                         name="recurring_date"
                                         className="form-control"
                                         value={recurring_date}
