@@ -60,7 +60,6 @@ const DisplayDepositsComponent = () => {
                 <th>Status</th>
                 <th>Payee ID</th>
                 <th>Type</th>
-                <th>Transaction Options</th>
                 
 
             </thead>
@@ -79,9 +78,7 @@ const DisplayDepositsComponent = () => {
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{deposit.status}</td>
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{deposit.payee_id}</td>
                             <td style={{ color: "#FFFFFF" }} class="bg-info">{deposit.type}</td>
-                            <td class="bg-info">                             
-                                <Button onClick={() => completeTransaction(deposit.id)} style={{ marginLeft: "10px", backgroundColor: "#F8C8DC", borderColor: "#F8C8DC" }}>Complete Deposit</Button>
-                            </td>
+                            
                             </tr>
                            )
                         })
