@@ -7,4 +7,4 @@ PROJECT REQUIREMENTS:
 5. Should be able to get the balance. ✔️
 6. search by customers ✔️
 7. Add A chart ✔️
-8. Export a list of customers in an excel spread sheet
+8. Export a list of customers in an excel spread sheet ✔️
