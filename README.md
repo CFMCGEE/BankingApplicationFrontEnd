@@ -6,5 +6,5 @@ PROJECT REQUIREMENTS:
 4. customer should be able to pay a bill ✔️
 5. Should be able to get the balance. ✔️
 6. search by customers ✔️
-7. Add A chart
-8. Export a list of customers in an excel spread sheet
+7. Add A chart ✔️
+8. Export a list of customers in an excel spread sheet ✔️
