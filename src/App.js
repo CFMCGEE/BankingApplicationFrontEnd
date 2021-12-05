@@ -27,7 +27,7 @@ import './App.css';
 const App = () => {
 
   return (
-    
+
     <div className="page">
 
       <header> <HeaderComponent /> </header>

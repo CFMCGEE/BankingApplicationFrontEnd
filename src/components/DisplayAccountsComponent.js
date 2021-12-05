@@ -32,19 +32,12 @@ useEffect(() => {
          
      }
 
-    // const successfullyDeletedAccount = () => {
-    //     alert("Account Successfully Deleted!")
-    // }
-
     return (
 
         <div>
           <br />
             <h2 className="text-center"> Accounts</h2>
             <br /> 
-            {/* <Link to="/create-account" className="btn btn-primary mb-2">
-              Create Account
-            </Link> */}
             <InputGroup className="mb-3">
                   <FormControl
                    placeholder="Search acounts"

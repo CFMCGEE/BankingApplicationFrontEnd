@@ -114,10 +114,10 @@ const CreateWithdrawalComponent = () => {
                   ></input>
                 </div>
                 <div className="form-group mb-2">
-                  <label className="form-label">Account Type:</label>
+                  <label className="form-label">Type:</label>
                   <input
                     type="text"
-                    placeholder="Enter Account Type"
+                    placeholder="Enter Type"
                     name="type"
                     className="form-control"
                     value={type}

@@ -66,6 +66,18 @@ const CreateBillComponent = () => {
                                 </div>
 
                                 <div className="form-group mb-2" >
+                                    <label className="form-label">Nickname:</label> <br />
+                                    <input type="text"
+                                        placeholder="Enter Nickname"
+                                        name="nickname"
+                                        className="form-control"
+                                        value={nickname}
+                                        onChange={(e) => setNickname(e.target.value)}
+                                    >
+                                    </input>
+                                </div>
+              
+                                <div className="form-group mb-2" >
                                     <label className="form-label">Creation Date:</label> <br />
                                     <input type="text"
                                         placeholder="Enter Creation Date"
@@ -90,21 +102,9 @@ const CreateBillComponent = () => {
                                 </div>
 
                                 <div className="form-group mb-2" >
-                                    <label className="form-label">Nickname:</label> <br />
-                                    <input type="text"
-                                        placeholder="Enter Nickname"
-                                        name="nickname"
-                                        className="form-control"
-                                        value={nickname}
-                                        onChange={(e) => setNickname(e.target.value)}
-                                    >
-                                    </input>
-                                </div>
-
-                                <div className="form-group mb-2" >
                                     <label className="form-label">Recurring Date:</label> <br />
                                     <input type="text"
-                                        placeholder="Enter Reccurring Date"
+                                        placeholder="Enter Recurring Date"
                                         name="recurring_date"
                                         className="form-control"
                                         value={recurring_date}

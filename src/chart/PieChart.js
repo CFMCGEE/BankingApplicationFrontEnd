@@ -29,7 +29,7 @@ const PieChart = () => {
   const url1 = `http://localhost:8080/bills/accounts/${id}/bills`;
   const url2 = `http://localhost:8080/deposits/accounts/${id}/deposits`;
   const url3 = `http://localhost:8080/withdrawals/accounts/${id}/withdrawals`;
-
+                
   const getBillsByAccountId = () => {
 
     BillService.getBillsByAccountId(id).then((response) => {
@@ -64,10 +64,21 @@ const getEveryWithdrawalByID = () => {
 
     let http = new XMLHttpRequest();
 
-    http.open('GET', url1 || url2 || url3, false);
+    http.open('GET', url1, false);
     http.send();
 
-    if (http.status !== 404) {
+    let http2 = new XMLHttpRequest();
+
+    http2.open('GET', url2, false);
+    http2.send();
+
+    let http3 = new XMLHttpRequest();
+
+    http3.open('GET', url3, false);
+    http3.send();
+
+
+    if (http.status !== 404 || http2.status !== 404 || http3.status !== 404) {
 
       return (
 

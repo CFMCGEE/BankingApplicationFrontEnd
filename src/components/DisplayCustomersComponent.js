@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import CustomerService from "../services/CustomerService";
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
 
 const DisplayCustomerComponent = () => {
+
   //function to change the state value
+  const [q, setQ] = useState("");
   const [customer, setCustomer] = useState([
     {
       id: "",
@@ -12,8 +15,6 @@ const DisplayCustomerComponent = () => {
       last_Name: "",
     },
   ]);
-
-  const [q, setQ] = useState("");
 
   //use effect to fetch the data from the server
   useEffect(() => {
@@ -36,9 +37,6 @@ const DisplayCustomerComponent = () => {
       <br />
       <h2 className="text-center">Customers</h2>
       <br /> 
-      {/* <Link to="/create-customer" className="btn btn-primary mb-2">
-        Create Customer
-      </Link> */}
     <InputGroup className="mb-3">
     <FormControl
         type="text"
@@ -78,6 +76,36 @@ const DisplayCustomerComponent = () => {
             ))}
         </tbody>
       </table>
+
+      <ReactHTMLTableToExcel
+        id="test-table-xls-button"
+        // className="download-table-xls-button"
+        table="customer-table"
+        filename="customer-list"
+        sheet="Customer_List"
+        buttonText="Download Data as Excel Sheet"
+        className="btn btn-success"
+      /> 
+
+      <div>
+        <table className="table table-bordered table-striped" id="customer-table" style={{ display: "none" }}>
+          <thead>
+            <th>Customer ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+          </thead>
+          <tbody>
+            {customer.map((customer) => (
+              <tr key={customer.id}>
+                <td class="bg-success">{customer.id}</td>
+                <td class="bg-info">{customer.first_Name}</td>
+                <td class="bg-info">{customer.last_Name}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
     </div>
   );
 };
