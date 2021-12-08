@@ -8,7 +8,7 @@ const CreateDepositsComponent = () => {
   const [transaction_date, setTransaction_date] = useState("");
   const [amount, setAmount] = useState("");
   const [description, setDescription] = useState("");
-  const [status, setStatus] = useState("");
+  const [status] = useState("Pending");
   const [payee_id, setPayee_id] = useState("");
   const [type] = useState("Deposit");
   const [account] = useState({ id: "" });
@@ -92,18 +92,6 @@ const CreateDepositsComponent = () => {
                     className="form-control"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
-                  ></input>
-                </div>
-
-                <div className="form-group mb-2">
-                  <label className="form-label"> Status:</label>
-                  <input
-                    type="text"
-                    placeholder="Whats the status"
-                    name="status"
-                    className="form-control"
-                    value={status}
-                    onChange={(e) => setStatus(e.target.value)}
                   ></input>
                 </div>
 

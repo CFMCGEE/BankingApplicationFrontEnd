@@ -49,8 +49,8 @@ const DisplayBillsComponent = () => {
              Return To Accounts
             </Link>
             <br /> 
-            <table className="table table-bordered table-striped">
-                <thead>
+            <table className="table table-bordered table-striped" >
+                <thead style={{backgroundColor: "green"}}>
 
                     <th>Bill ID</th>
                     <th>Status</th>
@@ -64,7 +64,7 @@ const DisplayBillsComponent = () => {
                     <th>Transaction Options</th>
 
                 </thead>
-                <tbody>
+                <tbody style={{backgroundColor: "orange"}}>
                     {
 
                         bills.map(bill => {
@@ -82,7 +82,7 @@ const DisplayBillsComponent = () => {
                                     <td>{bill.upcoming_payment_date}</td>
                                     <td>{bill.payment_amount}</td>
                                     <td>                             
-                                     <Button onClick={() => completeTransaction(bill.id)} style={{ marginLeft: "10px", backgroundColor: "#F8C8DC", borderColor: "#F8C8DC" }}>Pay Bill</Button>
+                                     <Button onClick={() => completeTransaction(bill.id)} style={{ marginLeft: "10px", backgroundColor: "#42bcf5", borderColor: "#42bcf5" }}>Pay Bill</Button>
                                     </td>
                                 </tr>
                             )
