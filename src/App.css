@@ -107,7 +107,7 @@ header {
 .page {
 
     position: relative;
-    max-height: 100vh;
+    min-height: 110vh;
 
 }
 
@@ -116,6 +116,7 @@ header {
     width: 100%;
     padding-right: var(--bs-gutter-x,5.0rem); 
     padding-left: var(--bs-gutter-x,.75rem);
+    padding-bottom: 5rem;
     margin-right: auto;
     margin-left: auto;
     min-width: 1500px;
@@ -175,3 +176,77 @@ header {
     font-size: x-large;
 
 }
+
+input{
+    display: block;
+    padding: 8px 16px;
+    font-size: 2em;
+    margin: 10px auto;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 3px solid #ccc;
+    outline: none !important;
+}
+
+/* validation styles
+
+input.valid{
+    border-color: #36cc36;
+}
+
+input.invalid{
+    border-color: orange;
+}
+
+.input_body {
+    font-family: arial;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 10px;
+    color: orange;
+    opacity: 0;
+    height: 0;
+}
+
+.p_body {
+
+    font-family: arial;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 10px;
+    color: orange;
+    opacity: 0;
+    height: 0;
+
+}
+
+.input.invalid + p{
+    opacity: 1;
+    height: auto;
+    margin-bottom: 20px;
+} */
+
+ /* .container {
+    padding: 100px;
+  }
+  
+  .email-input {
+    width: 300px;
+    padding: 5px 10px;
+  }
+  
+  .message {
+    margin-top: 20px;
+    font-size: 17px; 
+  }
+  
+  .success {
+    color: blue;
+  }
+  
+  .error {
+    color: red;
+  } */

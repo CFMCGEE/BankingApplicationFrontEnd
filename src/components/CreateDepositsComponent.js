@@ -10,7 +10,7 @@ const CreateDepositsComponent = () => {
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("");
   const [payee_id, setPayee_id] = useState("");
-  const [type, setType] = useState("");
+  const [type] = useState("Deposit");
   const [account] = useState({ id: "" });
 
   const navigate = useNavigate();
@@ -126,7 +126,7 @@ const CreateDepositsComponent = () => {
                     name="type"
                     className="form-control"
                     value={type}
-                    onChange={(e) => setType(e.target.value)}
+                    readOnly 
                   ></input>
                 </div>
                 <div className="form-group mb-2">
@@ -140,7 +140,7 @@ const CreateDepositsComponent = () => {
                   ></input>
                 </div>
 
-                <button className="btn btn-primary" onClick={(e) => createDeposits(e)}>Submit</button>
+                <button className="btn btn-primary" onClick={(e) => createDeposits(e)} disabled={ !medium || !transaction_date || !amount || !description || !status || !payee_id || !type || !account.id }>Submit</button>
                 <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "453px" }}>Cancel</Link>
             
               </form>

@@ -11,7 +11,7 @@ const CreateWithdrawalComponent = () => {
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("");
   const [payer_id, setPayer_id] = useState("");
-  const [type, setType] = useState("");
+  const [type] = useState("Withdrawal");
   const [account] = useState({ id: "" });
 
   const navigate = useNavigate();
@@ -121,7 +121,7 @@ const CreateWithdrawalComponent = () => {
                     name="type"
                     className="form-control"
                     value={type}
-                    onChange={(e) => setType(e.target.value)}
+                    readOnly
                   ></input>
                 </div>
                 <div className="form-group mb-2">
@@ -135,7 +135,7 @@ const CreateWithdrawalComponent = () => {
                   ></input>
                 </div>
 
-                <Button className="btn btn-primary" onClick={(e) => createWithdrawal(e)}>Submit</Button>
+                <Button className="btn btn-primary" onClick={(e) => createWithdrawal(e)} disabled={ !medium || !transaction_date || !amount || !description || !status || !payer_id || !type || !account.id }>Submit</Button>
                 <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "453px" }}>Cancel</Link>
             
               </Form>

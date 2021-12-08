@@ -79,12 +79,11 @@ const DisplayCustomerComponent = () => {
 
       <ReactHTMLTableToExcel
         id="test-table-xls-button"
-        // className="download-table-xls-button"
+        className={["btn btn-success"]} 
         table="customer-table"
-        filename="customer-list"
-        sheet="Customer_List"
+        filename="customers"
+        sheet="Customers"
         buttonText="Download Data as Excel Sheet"
-        className="btn btn-success"
       /> 
 
       <div>

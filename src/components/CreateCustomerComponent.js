@@ -5,8 +5,10 @@ import CustomerService from "../services/CustomerService";
 import "../App.css";
 
 const CreateOrUpdateCustomer = () => {
+
   const [first_Name, setFirstName] = useState("");
   const [last_Name, setLastName] = useState("");
+
   const navigate = useNavigate();
   const { id } = useParams();
 
@@ -72,7 +74,8 @@ const CreateOrUpdateCustomer = () => {
                   name="FirstName"
                   className="form-control"
                   value={first_Name}
-                  onChange={(e) => setFirstName(e.target.value)}
+                  onChange={(e) => setFirstName(e.target.value) } 
+                  required
                 ></input>
               </div>
               
@@ -86,12 +89,14 @@ const CreateOrUpdateCustomer = () => {
                   type="select"
                   placeholder="Enter Last Name"
                   name="LastName"
-                  className="form-control"
-                  value={last_Name}
+                  className={["form-control"]}
+                  value={last_Name} 
                   onChange={(e) => setLastName(e.target.value)}
-                ></input>
+                  required
+                ></input> 
               </div>
-              <button type="submit" className="btn btn-primary" onClick={(e) => saveOrUpdateCustomer(e)}>
+
+              <button type="submit" className="btn btn-primary" onClick={(e) => { saveOrUpdateCustomer(e); }} disabled={ !first_Name || !last_Name }> {/*saveOrUpdateCustomer(e)*/}
                 Submit
               </button>
               <Link to="/customers" className="btn btn-danger" style={{ marginLeft: "453px" }}>

@@ -152,10 +152,7 @@ const CreateBillComponent = () => {
                                 </div>
 
 
-                                <Button className="btn btn-primary" onClick={(e) => createBill(e)}>Submit</Button>
-                                {/* TO DO
-                                {/* use my delete Bill function */}
-                                {/* <button className ="btn btn-success" onClick = {(e) => makEABILL(e)}> Delete A Bill</button> */}
+                                <Button className="btn btn-primary" onClick={(e) => createBill(e)} disabled={ !status || !payee || !nickname || !creation_date || !payment_date || !recurring_date || !upcoming_payment_date || !payment_amount || !account.id }>Submit</Button>
                                 <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "453px" }}>Cancel</Link>
 
                             </Form>

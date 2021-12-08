@@ -15,7 +15,7 @@ const DisplayWithdrawalsComponent = () => {
        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    const getEveryWithdrawalByID = () => {
+    const getEveryWithdrawalByID = () => { //id
 
         WithdrawalsService.getEveryWithdrawalByID(id).then((response) => {
             setWithdrawals(response.data.data)
@@ -26,7 +26,7 @@ const DisplayWithdrawalsComponent = () => {
         
     }
 
-    const completeTransaction = (id) => {
+    const completeTransaction = () => {
 
             WithdrawalsService.deleteWithdrawal(id).then(() => {
 
